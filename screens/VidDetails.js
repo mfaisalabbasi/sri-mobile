@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import salad from '../img/salad.jpg';
+import salad from '../img/salad3.jpg';
 
 const VidDetails = () => {
   return (

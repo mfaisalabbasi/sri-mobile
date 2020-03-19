@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import info1 from '../img/info1.jpg';
+
 const Info = ({ dta }) => {
   const { infoUrl, title } = dta;
   return (

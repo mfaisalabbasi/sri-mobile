@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { TouchableOpacity, Image, Text, StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
-import salad from '../img/salad.jpg';
+
 const VidGrid = props => {
   const { vidUrl, title } = props.dta;
 

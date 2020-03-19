@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import salad1 from '../img/salad.jpg';
+import salad1 from '../img/salad3.jpg';
 const Detail = props => {
   const [state, setstate] = useState({
     data: {}
