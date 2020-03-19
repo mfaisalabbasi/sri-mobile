@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, ActivityIndicator } from 'react-native';
 import { Ionicons, Entypo } from '@expo/vector-icons';
 import Carousel from 'react-native-snap-carousel';
 import Info from '../components/Info';
 
 const Infographics = props => {
   const [state, setstate] = useState({
-    info: []
+    info: [],
+    loading: true
   });
   props.navigation.setOptions({
     headerLeft: () => {
@@ -34,28 +35,31 @@ const Infographics = props => {
         loadedData.push(res[item]);
       });
       setstate({
-        info: loadedData
+        info: loadedData,
+        loading: false
       });
     };
     fetchData();
   }, []);
-  const { info } = state;
+  const { info, loading } = state;
 
   return (
     <View style={styles.screen}>
-      <Carousel
-        autoplay
-        enableMomentum={false}
-        lockScrollWhileSnapping={true}
-        autoplayInterval={3000}
-        ref={c => {
-          carousel = c;
-        }}
-        data={info}
-        renderItem={itemData => <Info dta={itemData.item} />}
-        sliderWidth={800}
-        itemWidth={300}
-      />
+      {loading ? (
+        <View style={styles.parent}>
+          <ActivityIndicator size='large' color='#44809D' />
+        </View>
+      ) : (
+        <Carousel
+          ref={c => {
+            carousel = c;
+          }}
+          data={info}
+          renderItem={itemData => <Info dta={itemData.item} />}
+          sliderWidth={800}
+          itemWidth={300}
+        />
+      )}
     </View>
   );
 };
@@ -68,6 +72,12 @@ const styles = StyleSheet.create({
   },
   icon: {
     paddingHorizontal: 8
+  },
+  parent: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 export default Infographics;

@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-  Image,
-  FlatList,
-  Text
-} from 'react-native';
+import { View, StyleSheet, ActivityIndicator, FlatList } from 'react-native';
 import { Ionicons, Entypo } from '@expo/vector-icons';
 import VidGrid from '../components/VidGrid';
 
@@ -28,7 +20,8 @@ const Videos = props => {
   });
 
   const [state, setstate] = useState({
-    broadcast: []
+    broadcast: [],
+    loading: true
   });
 
   useEffect(() => {
@@ -42,18 +35,25 @@ const Videos = props => {
         loadedArr.push(res[val]);
       });
       setstate({
-        broadcast: loadedArr
+        broadcast: loadedArr,
+        loading: false
       });
     };
     fetchData();
   }, []);
-  const { broadcast } = state;
+  const { broadcast, loading } = state;
   return (
     <View style={styles.screen}>
-      <FlatList
-        data={broadcast}
-        renderItem={itemData => <VidGrid dta={itemData.item} />}
-      />
+      {loading ? (
+        <View style={styles.parent}>
+          <ActivityIndicator size='large' color='#00344D' />
+        </View>
+      ) : (
+        <FlatList
+          data={broadcast}
+          renderItem={itemData => <VidGrid dta={itemData.item} />}
+        />
+      )}
     </View>
   );
 };
@@ -67,45 +67,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8
   },
 
-  grid: {
-    backgroundColor: 'white',
-    width: '100%',
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    elevation: 3,
-    marginTop: 5
-  },
-  gridflex: {
-    flex: 1,
-    justifyContent: 'space-around',
+  parent: {
     flexDirection: 'row',
-    flexWrap: 'wrap'
-  },
-  gridSection: {
-    width: '47%',
-    backgroundColor: 'pink',
-    height: 150,
-    margin: 3,
-    borderRadius: 5,
-    overflow: 'hidden'
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 export default Videos;
-
-{
-  /* <ScrollView style={styles.grid}>
-        <View style={styles.gridflex}>
-          <FlatList
-          data={broadcast}
-          renderItem={itemData => (
-            <VidGrid
-              dta={itemData.item}
-              navigate={() => props.navigation.navigate('vidDetails')}
-            />
-          )}
-        /> 
-          <VidGrid navigate={() => props.navigation.navigate('vidDetails')} />
-          
-        </View>
-      </ScrollView> */
-}

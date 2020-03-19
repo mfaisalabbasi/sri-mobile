@@ -5,7 +5,8 @@ import {
   StyleSheet,
   ScrollView,
   FlatList,
-  ActivityIndicator
+  ActivityIndicator,
+  Text
 } from 'react-native';
 import All from '../components/All';
 
@@ -48,7 +49,7 @@ const Home = props => {
   const { arData, loading } = posts;
 
   return (
-    <ScrollView>
+    <View style={styles.screen}>
       {loading ? (
         <View style={styles.parent}>
           <ActivityIndicator size='large' color='#00344D' />
@@ -59,6 +60,7 @@ const Home = props => {
             data={arData}
             renderItem={itemData => (
               <All
+                key={itemData.index}
                 navigate={() => props.navigation.navigate('details')}
                 dta={itemData.item}
               />
@@ -66,20 +68,20 @@ const Home = props => {
           />
         </View>
       )}
-    </ScrollView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1
+  },
   parent: {
     flexDirection: 'row',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 200
+    alignItems: 'center'
   },
-  screen: {
-    flex: 1
-  },
+
   icon: {
     paddingHorizontal: 8
   }

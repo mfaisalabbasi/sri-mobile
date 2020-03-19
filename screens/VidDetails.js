@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   display: {
     width: '98%',
     height: '60%',
-    backgroundColor: 'red',
+
     marginTop: 5,
     borderRadius: 5,
     overflow: 'hidden',

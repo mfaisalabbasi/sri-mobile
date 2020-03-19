@@ -10,7 +10,7 @@ const Detail = props => {
   useEffect(() => {
     const fetchData = async () => {
       const req = await fetch(
-        `https://stratic-research-institute.firebaseio.com/articles/${id}.json`
+        `https://stratic-research-institute.firebaseio.com/articles/.json`
       );
       const res = await req.json();
     };

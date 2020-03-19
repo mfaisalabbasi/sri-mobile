@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview';
 import salad from '../img/salad.jpg';
 const VidGrid = props => {
   const { vidUrl, title } = props.dta;
-  const hi = 'hi';
+
   return (
     <View style={styles.card}>
       <View style={styles.vid}>
@@ -37,8 +37,7 @@ const styles = StyleSheet.create({
   },
   vid: {
     width: '100%',
-    height: '80%',
-    backgroundColor: 'red'
+    height: '80%'
   },
   title: {
     width: '100%',
