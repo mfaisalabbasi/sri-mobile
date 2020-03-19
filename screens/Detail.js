@@ -3,19 +3,16 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import salad1 from '../img/salad.jpg';
 const Detail = props => {
-  const { id } = props.route.params;
   const [state, setstate] = useState({
     data: {}
   });
 
-  console.log('This is id', id);
   useEffect(() => {
     const fetchData = async () => {
       const req = await fetch(
         `https://stratic-research-institute.firebaseio.com/articles/${id}.json`
       );
       const res = await req.json();
-      console.log('This is single pro', res);
     };
     fetchData();
   }, []);
