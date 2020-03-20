@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Button,
-  TextInput,
-  ScrollView
-} from 'react-native';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { Ionicons, EvilIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import * as firebase from 'firebase';
 
-// //Firebase configurations
+//firebase configurations
 // const firebaseConfig = {
 //   apiKey: 'AIzaSyDxsuzYOYOUcZ9adUutf260C-1bo9Z4f8E',
 //   authDomain: 'stratic-research-institute.firebaseapp.com',
@@ -22,7 +16,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 //   appId: '1:681190964874:web:17b6f2da1218577bf4f773',
 //   measurementId: 'G-ERTN8NM4KZ'
 // };
+
 // firebase.initializeApp(firebaseConfig);
+
+// const database = firebase.database();
 
 const AddArticle = props => {
   const [title, settitle] = useState('');
@@ -66,23 +63,11 @@ const AddArticle = props => {
     if (description.length === 0) {
       return alert('Include Description');
     }
-
-    const data = {
+    database.ref('articles/').push({
       title,
       imgUrl,
       description
-    };
-    const req = await fetch(
-      'https://stratic-research-institute.firebaseio.com/articles.json',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }
-    );
-    const res = await req.json();
+    });
     alert('Article published!!!');
     props.navigation.navigate('Home');
     settitle(''), setdescription(''), setimgUrl('');
@@ -200,3 +185,20 @@ const styles = StyleSheet.create({
   }
 });
 export default AddArticle;
+
+// storing data to database with fetch method
+
+// const req = await fetch(
+//   'https://stratic-research-institute.firebaseio.com/articles.json',
+//   {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(data)
+//   }
+// );
+// const res = await req.json();
+// alert('Article published!!!');
+// props.navigation.navigate('Home');
+// settitle(''), setdescription(''), setimgUrl('');

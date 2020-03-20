@@ -10,6 +10,24 @@ import {
 } from 'react-native';
 import All from '../components/All';
 
+import * as firebase from 'firebase';
+
+//firebase configurations
+const firebaseConfig = {
+  apiKey: 'AIzaSyDxsuzYOYOUcZ9adUutf260C-1bo9Z4f8E',
+  authDomain: 'stratic-research-institute.firebaseapp.com',
+  databaseURL: 'https://stratic-research-institute.firebaseio.com',
+  projectId: 'stratic-research-institute',
+  storageBucket: 'stratic-research-institute.appspot.com',
+  messagingSenderId: '681190964874',
+  appId: '1:681190964874:web:17b6f2da1218577bf4f773',
+  measurementId: 'G-ERTN8NM4KZ'
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const database = firebase.database();
+
 const Home = props => {
   props.navigation.setOptions({
     headerLeft: () => {
@@ -30,24 +48,17 @@ const Home = props => {
     loading: true
   });
   useEffect(() => {
-    const fetchData = async () => {
-      const req = await fetch(
-        'https://stratic-research-institute.firebaseio.com/articles.json'
-      );
-      const res = await req.json();
-      const loadedData = [];
-      Object.keys(res).map(item => {
-        loadedData.push(res[item]);
-      });
-      setposts({
-        arData: loadedData,
-        loading: false
-      });
-    };
-    fetchData();
+    const connection = database.ref('articles/');
+    const loaded = [];
+    connection.on('child_added', item => loaded.push(item.val()));
+
+    setposts({
+      arData: loaded,
+      loading: false
+    });
   }, []);
   const { arData, loading } = posts;
-
+  console.log('This is arData', arData);
   return (
     <View style={styles.screen}>
       {loading ? (
@@ -88,3 +99,19 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
+
+// const fetchData = async () => {
+//   const req = await fetch(
+//     'https://stratic-research-institute.firebaseio.com/articles.json'
+//   );
+//   const res = await req.json();
+//   const loadedData = [];
+//   Object.keys(res).map(item => {
+//     loadedData.push(res[item]);
+//   });
+//   setposts({
+//     arData: loadedData,
+//     loading: false
+//   });
+// };
+// fetchData();
