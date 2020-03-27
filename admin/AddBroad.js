@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
-  TouchableOpacity
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
-
+  TouchableOpacity,
+  Alert
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import * as ImagePicker from "expo-image-picker";
+import { db } from "../components/config";
 const AddBroad = props => {
   props.navigation.setOptions({
     headerLeft: () => {
@@ -25,49 +26,31 @@ const AddBroad = props => {
     }
   });
 
-  // //Image Picker library Function
-  // let openImagePickerAsync = async () => {
-  //   let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
-
-  //   if (permissionResult.granted === false) {
-  //     alert('Permission to access camera roll is required!');
-  //     return;
-  //   }
-
-  //   let pickerResult = await ImagePicker.launchImageLibraryAsync();
-  //   console.log(pickerResult);
-  // };
-
-  const [title, settitle] = useState('');
-  const [vidUrl, setvidUrl] = useState('');
+  const [title, settitle] = useState("");
+  const [vidUrl, setvidUrl] = useState("");
 
   const onPress = async () => {
     if (title.length === 0) {
-      return alert('Enter Video title');
+      return Alert.alert(
+        "Submission Failed",
+        "Enter broad title Before submission"
+      );
     }
     if (vidUrl.length === 0) {
-      return alert('Enter Video Urls');
+      return Alert.alert(
+        "Submission Failed",
+        "Enter broad URls Before submission"
+      );
     }
-    const data = {
+
+    db.ref("videos/").push({
       title,
       vidUrl
-    };
-    const req = await fetch(
-      'https://stratic-research-institute.firebaseio.com/videos.json',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }
-    );
-    const res = await req.json();
-    console.log('This is Vidoes  ', res);
-    alert('Video url Added!!!');
-    props.navigation.navigate('Videos');
-    setvidUrl('');
-    settitle('');
+    });
+    Alert.alert("Video submission", "Video Submitted successfully!");
+    props.navigation.navigate("Videos");
+    setvidUrl("");
+    settitle("");
   };
   return (
     <View style={styles.screen}>
@@ -93,7 +76,7 @@ const AddBroad = props => {
             />
 
             <TouchableOpacity style={styles.uploadBtn} onPress={onPress}>
-              <Text style={{ color: '#fff', textAlign: 'center' }}>
+              <Text style={{ color: "#fff", textAlign: "center" }}>
                 Add Videos
               </Text>
             </TouchableOpacity>
@@ -110,49 +93,49 @@ const styles = StyleSheet.create({
   },
   screen: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   form: {
-    width: '95%',
-    height: '95%',
-    backgroundColor: 'lightgray',
+    width: "95%",
+    height: "95%",
+    backgroundColor: "lightgray",
     borderRadius: 3
   },
   title: {
-    width: '100%',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    width: "100%",
+    textAlign: "center",
+    fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: '#00344D'
+    color: "#00344D"
   },
   inputs: {
-    width: '90%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: "90%",
+    marginLeft: "auto",
+    marginRight: "auto",
     padding: 5
   },
   inputContainer: {
-    justifyContent: 'space-between',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center"
   },
   input: {
-    width: '80%',
+    width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: '#00344D',
+    borderBottomColor: "#00344D",
     marginVertical: 20
   },
   uploadBtn: {
-    width: '80%',
+    width: "80%",
     padding: 10,
-    backgroundColor: '#44809D',
+    backgroundColor: "#44809D",
     marginVertical: 10,
     borderRadius: 5
   },
   btn: {
-    width: '100%'
+    width: "100%"
   }
 });
 

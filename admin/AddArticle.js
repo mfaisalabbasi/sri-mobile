@@ -1,31 +1,22 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
-import { Ionicons, EvilIcons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import * as firebase from 'firebase';
-
-//firebase configurations
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyDxsuzYOYOUcZ9adUutf260C-1bo9Z4f8E',
-//   authDomain: 'stratic-research-institute.firebaseapp.com',
-//   databaseURL: 'https://stratic-research-institute.firebaseio.com',
-//   projectId: 'stratic-research-institute',
-//   storageBucket: 'stratic-research-institute.appspot.com',
-//   messagingSenderId: '681190964874',
-//   appId: '1:681190964874:web:17b6f2da1218577bf4f773',
-//   measurementId: 'G-ERTN8NM4KZ'
-// };
-
-// firebase.initializeApp(firebaseConfig);
-
-// const database = firebase.database();
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Alert,
+  ScrollView
+} from "react-native";
+import { Ionicons, EvilIcons } from "@expo/vector-icons";
+import * as ImagePicker from "expo-image-picker";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { db } from "../components/config";
 
 const AddArticle = props => {
-  const [title, settitle] = useState('');
-  const [description, setdescription] = useState('');
-  const [imgUrl, setimgUrl] = useState('');
-
+  const [title, settitle] = useState("");
+  const [description, setdescription] = useState("");
+  const [imgUrl, setimgUrl] = useState({});
+  let id = 4;
   props.navigation.setOptions({
     headerLeft: () => {
       return (
@@ -40,40 +31,48 @@ const AddArticle = props => {
       );
     }
   });
-  // //Image Picker library Function
-  // let openImagePickerAsync = async () => {
-  //   let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+  //Image Picker library Function
+  let openImagePickerAsync = async () => {
+    let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
-  //   if (permissionResult.granted === false) {
-  //     alert('Permission to access camera roll is required!');
-  //     return;
-  //   }
+    if (permissionResult.granted === false) {
+      alert("Permission to access camera roll is required!");
+      return;
+    }
 
-  //   let pickerResult = await ImagePicker.launchImageLibraryAsync();
-  //   console.log(pickerResult);
-  // };
+    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+    console.log(pickerResult);
+  };
 
   const handlePress = async () => {
     if (title.length === 0) {
-      return alert('Enter post Title');
+      return Alert.alert("Submission Failed", "Add title Before submission");
     }
     if (imgUrl.length === 0) {
-      return alert('Enter Image Url');
+      return Alert.alert(
+        "Submission Failed",
+        "Add Featcherd image Before submission"
+      );
     }
     if (description.length === 0) {
-      return alert('Include Description');
+      return Alert.alert(
+        "Submission Failed",
+        "Add Description Before submission"
+      );
     }
-    database.ref('articles/').push({
+    db.ref("articles/").push({
+      id,
       title,
       imgUrl,
       description
     });
-    alert('Article published!!!');
-    props.navigation.navigate('Home');
-    settitle(''), setdescription(''), setimgUrl('');
+    Alert.alert("Article submission", "Article Submitted successfully!");
+    props.navigation.navigate("Home");
+    settitle(""), setdescription(""), setimgUrl("");
   };
+  console.log("this imgage", imgUrl);
   return (
-    <View style={styles.screen}>
+    <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
           <EvilIcons name='pencil' size={35} color='#00344D' />
@@ -89,26 +88,18 @@ const AddArticle = props => {
               name='title'
               value={title}
             />
-            <TextInput
-              style={styles.input}
-              placeholder='Add imageUrl'
-              placeholderTextColor='#00344D'
-              onChangeText={value => setimgUrl(value)}
-              name='img'
-              value={imgUrl}
-            />
-            {/* <TouchableOpacity
+
+            <TouchableOpacity
               style={styles.uploadBtn}
               onPress={openImagePickerAsync}
-              value={file}
-              onChangeText={value => setfile(value)}
+              value={imgUrl}
+              onChangeText={value => setimgUrl(value)}
             >
-              <Text style={{ color: '#fff' }}>
-                <Ionicons name='md-cloud-upload' size={25} color='#fff' />
-                {'  '}
+              <Text style={{ color: "#00344D" }}>
+                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />{" "}
                 Upload Featured Image
               </Text>
-            </TouchableOpacity> */}
+            </TouchableOpacity>
             <TextInput
               multiline={true}
               style={styles.input}
@@ -119,13 +110,13 @@ const AddArticle = props => {
               value={description}
             />
 
-            <TouchableOpacity style={styles.uploadBtn} onPress={handlePress}>
-              <Text style={{ color: '#fff' }}>Post an Article</Text>
+            <TouchableOpacity style={styles.btn} onPress={handlePress}>
+              <Text style={{ color: "#fff" }}>Post an Article</Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -135,70 +126,54 @@ const styles = StyleSheet.create({
   },
   screen: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   form: {
-    width: '95%',
-    height: '95%',
-    backgroundColor: 'lightgray',
+    width: "95%",
+    height: "95%",
+    backgroundColor: "lightgray",
     borderRadius: 3
   },
   title: {
-    width: '100%',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    width: "100%",
+    textAlign: "center",
+    fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: '#00344D'
+    color: "#00344D"
   },
   inputs: {
-    width: '90%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: "90%",
+    marginLeft: "auto",
+    marginRight: "auto",
     padding: 5
   },
   inputContainer: {
-    justifyContent: 'space-between',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center"
   },
   input: {
-    width: '80%',
+    width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: '#00344D',
+    borderBottomColor: "#00344D",
     marginVertical: 20
   },
   uploadBtn: {
-    width: '80%',
-    padding: 10,
-    backgroundColor: '#44809D',
-    marginVertical: 10,
-    borderRadius: 5
+    width: "80%",
+    padding: 5,
+    backgroundColor: "#C3C6C8",
+    marginLeft: -70,
+    borderRadius: 3
   },
   btn: {
-    width: '100%',
-    padding: 15,
+    backgroundColor: "#44809D",
+    width: "100%",
+    padding: 10,
     borderRadius: 5,
     marginVertical: 10,
     paddingHorizontal: 20
   }
 });
 export default AddArticle;
-
-// storing data to database with fetch method
-
-// const req = await fetch(
-//   'https://stratic-research-institute.firebaseio.com/articles.json',
-//   {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-//   }
-// );
-// const res = await req.json();
-// alert('Article published!!!');
-// props.navigation.navigate('Home');
-// settitle(''), setdescription(''), setimgUrl('');

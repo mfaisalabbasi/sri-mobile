@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Ionicons, Entypo } from '@expo/vector-icons';
+import React, { useEffect, useState, useCallback } from "react";
+import { Ionicons, Entypo } from "@expo/vector-icons";
 import {
   View,
   StyleSheet,
@@ -7,26 +7,9 @@ import {
   FlatList,
   ActivityIndicator,
   Text
-} from 'react-native';
-import All from '../components/All';
-
-import * as firebase from 'firebase';
-
-//firebase configurations
-const firebaseConfig = {
-  apiKey: 'AIzaSyDxsuzYOYOUcZ9adUutf260C-1bo9Z4f8E',
-  authDomain: 'stratic-research-institute.firebaseapp.com',
-  databaseURL: 'https://stratic-research-institute.firebaseio.com',
-  projectId: 'stratic-research-institute',
-  storageBucket: 'stratic-research-institute.appspot.com',
-  messagingSenderId: '681190964874',
-  appId: '1:681190964874:web:17b6f2da1218577bf4f773',
-  measurementId: 'G-ERTN8NM4KZ'
-};
-
-firebase.initializeApp(firebaseConfig);
-
-const database = firebase.database();
+} from "react-native";
+import All from "../components/All";
+import { db } from "../components/config.js";
 
 const Home = props => {
   props.navigation.setOptions({
@@ -47,18 +30,27 @@ const Home = props => {
     arData: [],
     loading: true
   });
-  useEffect(() => {
-    const connection = database.ref('articles/');
+
+  const fetchData = async () => {
+    const connection = db.ref("articles");
     const loaded = [];
-    connection.on('child_added', item => loaded.push(item.val()));
+
+    await connection.once("value", snapshot => {
+      snapshot.forEach(child => {
+        loaded.push(child.val());
+      });
+    });
 
     setposts({
-      arData: loaded,
+      arData: loaded.reverse(),
       loading: false
     });
-  }, []);
+  };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
   const { arData, loading } = posts;
-  console.log('This is arData', arData);
+
   return (
     <View style={styles.screen}>
       {loading ? (
@@ -68,11 +60,13 @@ const Home = props => {
       ) : (
         <View style={styles.screen}>
           <FlatList
+            keyExtractor={(item, index) => "key" + index}
             data={arData}
             renderItem={itemData => (
               <All
-                key={itemData.index}
-                navigate={() => props.navigation.navigate('details')}
+                navigate={() =>
+                  props.navigation.navigate("details", { id: itemData.item })
+                }
                 dta={itemData.item}
               />
             )}
@@ -87,10 +81,10 @@ const styles = StyleSheet.create({
     flex: 1
   },
   parent: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
 
   icon: {
@@ -99,19 +93,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-
-// const fetchData = async () => {
-//   const req = await fetch(
-//     'https://stratic-research-institute.firebaseio.com/articles.json'
-//   );
-//   const res = await req.json();
-//   const loadedData = [];
-//   Object.keys(res).map(item => {
-//     loadedData.push(res[item]);
-//   });
-//   setposts({
-//     arData: loadedData,
-//     loading: false
-//   });
-// };
-// fetchData();

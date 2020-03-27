@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, ActivityIndicator } from 'react-native';
-import { Ionicons, Entypo } from '@expo/vector-icons';
-import Carousel from 'react-native-snap-carousel';
-import Info from '../components/Info';
+import React, { useEffect, useState } from "react";
+import { View, StyleSheet, ActivityIndicator } from "react-native";
+import { Ionicons, Entypo } from "@expo/vector-icons";
+import Carousel from "react-native-snap-carousel";
+import Info from "../components/Info";
+import { db } from "../components/config";
 
 const Infographics = props => {
   const [state, setstate] = useState({
@@ -24,23 +25,22 @@ const Infographics = props => {
     }
   });
 
+  const fetchData = async () => {
+    const connection = db.ref("infographics");
+    const loadedData = [];
+    await connection.once("value", snapshot => {
+      snapshot.forEach(child => {
+        loadedData.push(child.val());
+      });
+    });
+    setstate({
+      info: loadedData.reverse(),
+      loading: false
+    });
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const req = await fetch(
-        'https://stratic-research-institute.firebaseio.com/infographics.json'
-      );
-      const res = await req.json();
-      const loadedData = [];
-      Object.keys(res).map(item => {
-        loadedData.push(res[item]);
-      });
-      setstate({
-        info: loadedData,
-        loading: false
-      });
-    };
     fetchData();
-  }, []);
+  }, [fetchData]);
   const { info, loading } = state;
 
   return (
@@ -66,18 +66,18 @@ const Infographics = props => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#264D64'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#264D64"
   },
   icon: {
     paddingHorizontal: 8
   },
   parent: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 export default Infographics;

@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
-  TouchableOpacity
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
+  TouchableOpacity,
+  Alert
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import * as ImagePicker from "expo-image-picker";
+import { db, storage } from "../components/config";
+import { ScrollView } from "react-native-gesture-handler";
 
 const UploadInfo = props => {
   props.navigation.setOptions({
@@ -25,52 +28,75 @@ const UploadInfo = props => {
     }
   });
 
-  // //Image Picker library Function
-  // let openImagePickerAsync = async () => {
-  //   let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+  //states for components
+  const [title, setTitle] = useState("");
+  const [imgUrl, setImgUrl] = useState(null);
 
-  //   if (permissionResult.granted === false) {
-  //     alert('Permission to access camera roll is required!');
-  //     return;
-  //   }
+  const [infoUrl, setinfoUrl] = useState(null);
 
-  //   let pickerResult = await ImagePicker.launchImageLibraryAsync();
-  //   console.log(pickerResult);
-  // };
+  //Image Picker library Function
+  let openImagePickerAsync = async () => {
+    let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
-  const [title, settitle] = useState('');
-  const [infoUrl, setinfoUrl] = useState('');
-
-  const onPress = async () => {
-    if (title.length === 0) {
-      return alert('Enter post title');
+    if (permissionResult.granted === false) {
+      alert("Permission to access camera roll is required!");
+      return;
     }
-    if (infoUrl.length === 0) {
-      return alert('Enter Info Urls');
-    }
-    const data = {
-      title,
-      infoUrl
-    };
-    const req = await fetch(
-      'https://stratic-research-institute.firebaseio.com/infographics.json',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+
+    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+    upload(pickerResult.uri);
+  };
+  // upload Image Function
+  const upload = async uri => {
+    const response = await fetch(uri);
+    const blob = await response.blob();
+    setinfoUrl(blob);
+  };
+
+  const uploadImage = async () => {
+    // ref
+    const upload = storage.ref();
+    const uptask = upload
+      .child(`infographics`)
+      .child(title)
+      .put(infoUrl);
+    // progress
+    uptask.on(
+      "state_changed",
+      snapshot => {
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log("Upload is " + progress + "% done");
+      },
+      // err handling
+      err => console.log(err),
+      //uploaded successfully
+      () => {
+        uptask.snapshot.ref.getDownloadURL().then(uri => setImgUrl(uri));
       }
     );
-    const res = await req.json();
-    console.log('This is Info ', res);
-    alert('Infographic is uploaded');
-    props.navigation.navigate('Infographics');
-    setinfoUrl('');
-    settitle('');
   };
+
+  const onPress = async => {
+    if (title.length === 0) {
+      return Alert.alert(
+        "Submission Failed",
+        "Add Infographic Title Before uploading"
+      );
+    }
+    uploadImage();
+
+    db.ref("infographics/").push({
+      imgUrl
+    });
+    Alert.alert("Info submission", "Infographic Submitted successfully!");
+    props.navigation.navigate("Infographics");
+    setinfoUrl("");
+    setTitle("");
+    setImgUrl(null);
+  };
+  console.log(imgUrl);
   return (
-    <View style={styles.screen}>
+    <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
           <Ionicons name='md-cloud-upload' size={27} color='#00344D' /> Upload
@@ -83,34 +109,28 @@ const UploadInfo = props => {
               placeholder='Add Title'
               placeholderTextColor='#00344D'
               value={title}
-              onChangeText={value => settitle(value)}
+              onChangeText={value => setTitle(value)}
             />
-            <TextInput
-              style={styles.input}
-              placeholder='Add infoUrl'
-              placeholderTextColor='#00344D'
-              value={infoUrl}
-              onChangeText={value => setinfoUrl(value)}
-            />
-            {/* <TouchableOpacity
+
+            <TouchableOpacity
               style={styles.uploadBtn}
               onPress={openImagePickerAsync}
             >
-              <Text style={{ color: '#fff' }}>
-                <Ionicons name='md-cloud-upload' size={25} color='#fff' />
-                {'  '}
+              <Text style={{ color: "#00344D" }}>
+                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />
+                {"  "}
                 Upload Featured Image
               </Text>
-            </TouchableOpacity> */}
-            <TouchableOpacity style={styles.uploadBtn} onPress={onPress}>
-              <Text style={{ color: '#fff', textAlign: 'center' }}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btn} onPress={onPress}>
+              <Text style={{ color: "#fff", textAlign: "center" }}>
                 Upload Infographics
               </Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -120,49 +140,55 @@ const styles = StyleSheet.create({
   },
   screen: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   form: {
-    width: '95%',
-    height: '95%',
-    backgroundColor: 'lightgray',
+    width: "95%",
+    height: "95%",
+    backgroundColor: "lightgray",
     borderRadius: 3
   },
   title: {
-    width: '100%',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    width: "100%",
+    textAlign: "center",
+    fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: '#00344D'
+    color: "#00344D"
   },
   inputs: {
-    width: '90%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: "90%",
+    marginLeft: "auto",
+    marginRight: "auto",
     padding: 5
   },
   inputContainer: {
-    justifyContent: 'space-between',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center"
   },
   input: {
-    width: '80%',
+    width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: '#00344D',
+    borderBottomColor: "#00344D",
     marginVertical: 20
   },
   uploadBtn: {
-    width: '80%',
-    padding: 10,
-    backgroundColor: '#44809D',
-    marginVertical: 10,
-    borderRadius: 5
+    width: "80%",
+    padding: 5,
+    backgroundColor: "#C3C6C8",
+
+    borderRadius: 3,
+    marginBottom: 30
   },
   btn: {
-    width: '100%'
+    backgroundColor: "#44809D",
+
+    padding: 10,
+    borderRadius: 5,
+
+    paddingHorizontal: 20
   }
 });
 
