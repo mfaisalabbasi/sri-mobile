@@ -31,6 +31,8 @@ const UploadInfo = props => {
   //states for components
   const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState(null);
+  const [progress, setprogress] = useState("");
+  const [status, setStatus] = useState(false);
 
   const [infoUrl, setinfoUrl] = useState(null);
 
@@ -65,13 +67,16 @@ const UploadInfo = props => {
       "state_changed",
       snapshot => {
         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log("Upload is " + progress + "% done");
+
+        setprogress("Uploading " + progress.toFixed(2) + "% done");
+        setStatus(true);
       },
       // err handling
       err => console.log(err),
       //uploaded successfully
       () => {
         uptask.snapshot.ref.getDownloadURL().then(uri => setImgUrl(uri));
+        setStatus(false);
       }
     );
   };
@@ -88,13 +93,12 @@ const UploadInfo = props => {
     db.ref("infographics/").push({
       imgUrl
     });
-    Alert.alert("Info submission", "Infographic Submitted successfully!");
-    props.navigation.navigate("Infographics");
+
     setinfoUrl("");
     setTitle("");
     setImgUrl(null);
   };
-  console.log(imgUrl);
+
   return (
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
@@ -119,9 +123,27 @@ const UploadInfo = props => {
               <Text style={{ color: "#00344D" }}>
                 <Ionicons name='md-cloud-upload' size={18} color='#00344D' />
                 {"  "}
-                Upload Featured Image
+                Upload Infographic
               </Text>
             </TouchableOpacity>
+            {status ? (
+              <TouchableOpacity style={styles.uploadBtn}>
+                <View>
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      color: "#00344D",
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {progress}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            ) : (
+              <View></View>
+            )}
+
             <TouchableOpacity style={styles.btn} onPress={onPress}>
               <Text style={{ color: "#fff", textAlign: "center" }}>
                 Upload Infographics

@@ -1,25 +1,25 @@
-import React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React from "react";
+import { View, StyleSheet, Text, Image } from "react-native";
 
 const Info = ({ dta }) => {
-  const { infoUrl, title } = dta;
+  const { imgUrl } = dta;
   return (
     <View style={styles.screen}>
-      <Image source={{ uri: infoUrl }} style={styles.img} />
+      <Image source={{ uri: imgUrl }} style={styles.img} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   screen: {
-    backgroundColor: '#264D64',
-    height: '90%',
-    marginBottom: 'auto',
-    marginTop: 'auto',
-    justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor: "#264D64",
+    height: "90%",
+    marginBottom: "auto",
+    marginTop: "auto",
+    justifyContent: "center",
+    alignItems: "center"
   },
 
-  img: { width: '100%', height: '100%' }
+  img: { width: "100%", height: "100%" }
 });
 export default Info;

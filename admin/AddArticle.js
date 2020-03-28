@@ -10,13 +10,15 @@ import {
 import { Ionicons, EvilIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { db } from "../components/config";
+import { db, storage } from "../components/config";
 
 const AddArticle = props => {
   const [title, settitle] = useState("");
   const [description, setdescription] = useState("");
-  const [imgUrl, setimgUrl] = useState({});
-  let id = 4;
+  const [imgUrl, setimgUrl] = useState(null);
+  const [file, setFile] = useState(null);
+  const [status, setStatus] = useState(false);
+  const [progress, setprogress] = useState("");
   props.navigation.setOptions({
     headerLeft: () => {
       return (
@@ -41,36 +43,59 @@ const AddArticle = props => {
     }
 
     let pickerResult = await ImagePicker.launchImageLibraryAsync();
-    console.log(pickerResult);
+    upload(pickerResult.uri);
+  };
+
+  const upload = async uri => {
+    const response = await fetch(uri);
+    const blob = await response.blob();
+    setFile(blob);
+  };
+
+  const uploadImage = () => {
+    const uploadTask = storage
+      .ref()
+      .child("articles")
+      .child(title)
+      .put(file);
+    uploadTask.on(
+      "state_changed",
+      snapshot => {
+        let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+        setprogress("Uploading  " + progress.toFixed(2) + "%  done");
+        setStatus(true);
+      },
+      err => console.log(err),
+      () => {
+        uploadTask.snapshot.ref.getDownloadURL().then(uri => setimgUrl(uri));
+        setStatus(false);
+      }
+    );
   };
 
   const handlePress = async () => {
     if (title.length === 0) {
       return Alert.alert("Submission Failed", "Add title Before submission");
     }
-    if (imgUrl.length === 0) {
-      return Alert.alert(
-        "Submission Failed",
-        "Add Featcherd image Before submission"
-      );
-    }
+
     if (description.length === 0) {
       return Alert.alert(
         "Submission Failed",
         "Add Description Before submission"
       );
     }
+    uploadImage();
     db.ref("articles/").push({
-      id,
       title,
       imgUrl,
       description
     });
-    Alert.alert("Article submission", "Article Submitted successfully!");
-    props.navigation.navigate("Home");
-    settitle(""), setdescription(""), setimgUrl("");
+
+    settitle(""), setdescription(""), setimgUrl(null);
+    setFile(null);
   };
-  console.log("this imgage", imgUrl);
+
   return (
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
@@ -92,14 +117,25 @@ const AddArticle = props => {
             <TouchableOpacity
               style={styles.uploadBtn}
               onPress={openImagePickerAsync}
-              value={imgUrl}
-              onChangeText={value => setimgUrl(value)}
             >
               <Text style={{ color: "#00344D" }}>
-                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />{" "}
+                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />
+                {"  "}
                 Upload Featured Image
               </Text>
             </TouchableOpacity>
+            {status ? (
+              <TouchableOpacity style={styles.uploadBtn}>
+                <View>
+                  <Text style={{ color: "#00344D", fontWeight: "bold" }}>
+                    {progress}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            ) : (
+              <View></View>
+            )}
+
             <TextInput
               multiline={true}
               style={styles.input}
@@ -164,15 +200,17 @@ const styles = StyleSheet.create({
     width: "80%",
     padding: 5,
     backgroundColor: "#C3C6C8",
-    marginLeft: -70,
+    marginLeft: -50,
+    marginBottom: 5,
+    marginTop: 5,
     borderRadius: 3
   },
   btn: {
     backgroundColor: "#44809D",
-    width: "100%",
+
     padding: 10,
     borderRadius: 5,
-    marginVertical: 10,
+
     paddingHorizontal: 20
   }
 });
