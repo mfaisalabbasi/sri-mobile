@@ -5,9 +5,11 @@ import {
   StyleSheet,
   TextInput,
   Alert,
-  ScrollView
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform
 } from "react-native";
-import { Ionicons, EvilIcons } from "@expo/vector-icons";
+import { Ionicons, Foundation } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { db, storage } from "../components/config";
@@ -100,56 +102,58 @@ const AddArticle = props => {
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
-          <EvilIcons name='pencil' size={35} color='#00344D' />
-          Add an Article
+          <Foundation name='clipboard-pencil' size={70} color='#44809D' />
         </Text>
+
         <View style={styles.inputs}>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.input}
-              placeholder='Add Title'
-              placeholderTextColor='#00344D'
-              onChangeText={value => settitle(value)}
-              name='title'
-              value={title}
-            />
+          <TextInput
+            style={styles.input}
+            placeholder='Add Title'
+            placeholderTextColor='#44809D'
+            onChangeText={value => settitle(value)}
+            name='title'
+            value={title}
+          />
 
-            <TouchableOpacity
-              style={styles.uploadBtn}
-              onPress={openImagePickerAsync}
-            >
-              <Text style={{ color: "#00344D" }}>
-                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />
-                {"  "}
-                Upload Featured Image
-              </Text>
+          <TouchableOpacity
+            style={styles.uploadBtn}
+            onPress={openImagePickerAsync}
+          >
+            <Text style={{ color: "#44809D" }}>
+              <Ionicons name='md-cloud-upload' size={18} color='#44809D' />
+              {"  "}
+              Upload Featured Image
+            </Text>
+          </TouchableOpacity>
+          {status ? (
+            <TouchableOpacity style={styles.uploadBtn}>
+              <View>
+                <Text style={{ color: "#44809D", fontWeight: "bold" }}>
+                  {progress}
+                </Text>
+              </View>
             </TouchableOpacity>
-            {status ? (
-              <TouchableOpacity style={styles.uploadBtn}>
-                <View>
-                  <Text style={{ color: "#00344D", fontWeight: "bold" }}>
-                    {progress}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ) : (
-              <View></View>
-            )}
+          ) : (
+            <View></View>
+          )}
 
-            <TextInput
-              multiline={true}
-              style={styles.input}
-              placeholder='Add Description'
-              placeholderTextColor='#00344D'
-              onChangeText={value => setdescription(value)}
-              name='description'
-              value={description}
-            />
+          <TextInput
+            numberOfLines={2}
+            multiline={true}
+            style={styles.input}
+            placeholder='Add Description'
+            placeholderTextColor='#44809D'
+            onChangeText={value => setdescription(value)}
+            name='description'
+            value={description}
+            returnKeyType='done'
+          />
 
-            <TouchableOpacity style={styles.btn} onPress={handlePress}>
-              <Text style={{ color: "#fff" }}>Post an Article</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity style={styles.btn} onPress={handlePress}>
+            <Text style={{ color: "#fff", textAlign: "center" }}>
+              Post an Article
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -177,10 +181,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: "#00344D"
+    color: "#44809D",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10
   },
   inputs: {
-    width: "90%",
+    width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
     padding: 5
@@ -193,24 +200,27 @@ const styles = StyleSheet.create({
   input: {
     width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: "#00344D",
-    marginVertical: 20
+    borderBottomColor: "#44809D",
+    marginVertical: 20,
+    marginLeft: "auto",
+    marginRight: "auto"
   },
   uploadBtn: {
     width: "80%",
-    padding: 5,
+    padding: 12,
     backgroundColor: "#C3C6C8",
-    marginLeft: -50,
-    marginBottom: 5,
-    marginTop: 5,
-    borderRadius: 3
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderRadius: 3,
+    marginBottom: -3
   },
   btn: {
     backgroundColor: "#44809D",
-
+    width: "80%",
     padding: 10,
     borderRadius: 5,
-
+    marginLeft: "auto",
+    marginRight: "auto",
     paddingHorizontal: 20
   }
 });

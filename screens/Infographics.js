@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#264D64"
+    backgroundColor: "#B1B5B7"
   },
   icon: {
     paddingHorizontal: 8

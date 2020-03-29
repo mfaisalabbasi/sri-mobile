@@ -103,15 +103,14 @@ const UploadInfo = props => {
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
-          <Ionicons name='md-cloud-upload' size={27} color='#00344D' /> Upload
-          Infographics
+          <Ionicons name='md-images' size={70} color='#44809D' />
         </Text>
         <View style={styles.inputs}>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.input}
               placeholder='Add Title'
-              placeholderTextColor='#00344D'
+              placeholderTextColor='#44809D'
               value={title}
               onChangeText={value => setTitle(value)}
             />
@@ -120,8 +119,8 @@ const UploadInfo = props => {
               style={styles.uploadBtn}
               onPress={openImagePickerAsync}
             >
-              <Text style={{ color: "#00344D" }}>
-                <Ionicons name='md-cloud-upload' size={18} color='#00344D' />
+              <Text style={{ color: "#44809D" }}>
+                <Ionicons name='md-cloud-upload' size={18} color='#44809D' />
                 {"  "}
                 Upload Infographic
               </Text>
@@ -177,10 +176,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: "#00344D"
+    color: "#44809D",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10
   },
   inputs: {
-    width: "90%",
+    width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
     padding: 5
@@ -193,12 +195,12 @@ const styles = StyleSheet.create({
   input: {
     width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: "#00344D",
+    borderBottomColor: "#44809D",
     marginVertical: 20
   },
   uploadBtn: {
     width: "80%",
-    padding: 5,
+    padding: 12,
     backgroundColor: "#C3C6C8",
 
     borderRadius: 3,

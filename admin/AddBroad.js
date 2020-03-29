@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Alert
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { db } from "../components/config";
 const AddBroad = props => {
@@ -56,21 +56,21 @@ const AddBroad = props => {
     <View style={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
-          <Ionicons name='ios-videocam' size={50} color='#00344D' />
+          <FontAwesome name='file-video-o' size={70} color='#44809D' />
         </Text>
         <View style={styles.inputs}>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.input}
               placeholder='Video title'
-              placeholderTextColor='#00344D'
+              placeholderTextColor='#44809D'
               value={title}
               onChangeText={value => settitle(value)}
             />
             <TextInput
               style={styles.input}
               placeholder='Video url'
-              placeholderTextColor='#00344D'
+              placeholderTextColor='#44809D'
               value={vidUrl}
               onChangeText={value => setvidUrl(value)}
             />
@@ -108,10 +108,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     padding: 5,
     fontSize: 20,
-    color: "#00344D"
+    color: "#44809D",
+    marginTop: 15
   },
   inputs: {
-    width: "90%",
+    width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
     padding: 5
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
   input: {
     width: "80%",
     borderBottomWidth: 1,
-    borderBottomColor: "#00344D",
+    borderBottomColor: "#44809D",
     marginVertical: 20
   },
   uploadBtn: {
