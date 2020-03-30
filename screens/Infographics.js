@@ -58,6 +58,11 @@ const Infographics = props => {
           renderItem={itemData => <Info dta={itemData.item} />}
           sliderWidth={800}
           itemWidth={300}
+          autoplay
+          loop
+          enableMomentum={false}
+          lockScrollWhileSnapping={true}
+          autoplayInterval={5000}
         />
       )}
     </View>

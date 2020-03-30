@@ -6,7 +6,8 @@ import {
   ScrollView,
   FlatList,
   ActivityIndicator,
-  Text
+  Text,
+  AsyncStorage
 } from "react-native";
 import All from "../components/All";
 import { db } from "../components/config.js";
@@ -34,7 +35,6 @@ const Home = props => {
   const fetchData = async () => {
     const connection = db.ref("articles");
     const loaded = [];
-
     await connection.once("value", snapshot => {
       snapshot.forEach(child => {
         loaded.push(child.val());

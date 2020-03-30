@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Ionicons, Entypo, EvilIcons, Foundation } from "@expo/vector-icons";
+import React, { useState, useEffect, useCallback } from "react";
+import { Ionicons, Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -14,13 +14,13 @@ import Infographics from "../screens/Infographics";
 import InfoDetails from "../screens/InfoDetails";
 import Videos from "../screens/Videos";
 import Detail from "../screens/Detail";
-import VidDetails from "../screens/VidDetails";
 import About from "../screens/About";
 import Team from "../screens/Team";
 import AddArticle from "../admin/AddArticle";
 import UploadInfo from "../admin/UploadInfo";
 import AddBroad from "../admin/AddBroad";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, AsyncStorage } from "react-native";
+import Admin from "../screens/Admin";
 
 //Stack Navigator For Articles
 const Stack = createStackNavigator();
@@ -71,13 +71,6 @@ const stackVideos = () => {
           title: "Videos"
         }}
       />
-      <Stack.Screen
-        name='vidDetails'
-        component={VidDetails}
-        options={{
-          title: "Watch Videos"
-        }}
-      />
     </Stack.Navigator>
   );
 };
@@ -95,7 +88,7 @@ const stackAddarticle = () => {
       }}
     >
       <Stack.Screen
-        name='add article'
+        name='article'
         component={AddArticle}
         options={{
           title: "Add Articles"
@@ -226,6 +219,29 @@ const stackInfo = () => {
   );
 };
 
+//Stack Navigator For Admin
+
+const adminStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#00344D"
+        },
+        headerTintColor: "#fff"
+      }}
+    >
+      <Stack.Screen
+        name='Adminstration'
+        component={Admin}
+        options={{
+          title: "Adminstrations "
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 // Tab Navigator Section
 const Tab = createBottomTabNavigator();
 const tabNavigation = () => {
@@ -273,9 +289,6 @@ function CustomDrawerContent(props) {
     <DrawerContentScrollView {...props}>
       <View style={styles.logo}>
         <View style={styles.imgSec}>
-          {/* <Text style={{ fontWeight: "bold", color: "#44809D", fontSize: 70 }}>
-            SRI
-          </Text> */}
           <Image
             source={require("../assets/logo.png")}
             style={{ width: "100%", height: "100%" }}
@@ -291,6 +304,18 @@ function CustomDrawerContent(props) {
 const Draw = createDrawerNavigator();
 const Navigation = () => {
   const [state, setstate] = useState(false);
+
+  const fun = useCallback(async () => {
+    const getToken = await AsyncStorage.getItem("token");
+
+    if (getToken) {
+      setstate(true);
+    }
+  });
+  useEffect(() => {
+    fun();
+  }, [fun]);
+
   return (
     <NavigationContainer>
       {!state ? (
@@ -320,6 +345,17 @@ const Navigation = () => {
             options={{
               drawerIcon: draw => {
                 return <Ionicons name='ios-people' size={30} color='white' />;
+              }
+            }}
+          />
+          <Draw.Screen
+            name='Adminstration'
+            component={adminStack}
+            options={{
+              drawerIcon: draw => {
+                return (
+                  <FontAwesome name='user-secret' size={28} color='white' />
+                );
               }
             }}
           />

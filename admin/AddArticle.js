@@ -5,9 +5,7 @@ import {
   StyleSheet,
   TextInput,
   Alert,
-  ScrollView,
-  KeyboardAvoidingView,
-  Platform
+  ScrollView
 } from "react-native";
 import { Ionicons, Foundation } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";

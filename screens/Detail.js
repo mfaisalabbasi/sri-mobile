@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import salad1 from "../img/salad3.jpg";
-import { db } from "../components/config";
+
 const Detail = props => {
-  const [state, setstate] = useState({
-    data: {}
-  });
-
   const { id } = props.route.params;
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const connection = await db.ref("articles").child(id);
-  //     console.log(connection);
-  //   };
 
-  //   fetchData();
-  // }, []);
   return (
     <View style={styles.screen}>
       <ScrollView style={styles.scroll}>
