@@ -304,18 +304,16 @@ function CustomDrawerContent(props) {
 const Draw = createDrawerNavigator();
 const Navigation = () => {
   const [state, setstate] = useState(false);
+  const fethchToken = async () => {
+    const token = await AsyncStorage.getItem("token");
 
-  const fun = useCallback(async () => {
-    const getToken = await AsyncStorage.getItem("token");
-
-    if (getToken) {
+    if (token) {
       setstate(true);
     }
-  });
+  };
   useEffect(() => {
-    fun();
-  }, [fun]);
-
+    fethchToken();
+  }, [fethchToken]);
   return (
     <NavigationContainer>
       {!state ? (

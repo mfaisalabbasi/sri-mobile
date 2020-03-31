@@ -50,14 +50,15 @@ const AddArticle = props => {
       if (!res.ok) {
         Alert.alert("Invalid Credentials", "check your email or password");
       }
+
       const token = res.idToken;
       await AsyncStorage.setItem("token", token);
       props.navigation.navigate("Infographics");
       setEmail("");
       setPassword("");
-      Alert.alert("successful", "welcome, opration succeed");
+      Alert.alert("successful", "welcome, operation succeed");
     } catch (error) {
-      Alert.alert("Logging failed", error.message);
+      console.log(error);
     }
   };
 
