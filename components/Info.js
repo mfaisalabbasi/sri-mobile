@@ -20,6 +20,10 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
 
-  img: { width: "100%", height: "100%" }
+  img: {
+    width: "100%",
+    height: "100%",
+    overflow: "hidden"
+  }
 });
 export default Info;

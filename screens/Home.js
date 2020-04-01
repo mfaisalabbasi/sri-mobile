@@ -33,13 +33,13 @@ const Home = props => {
   });
 
   const fetchData = async () => {
-    const connection = db.ref("articles");
+    const req = await fetch(
+      "https://stratic-research-institute.firebaseio.com/articles.json"
+    );
     const loaded = [];
-    await connection.once("value", snapshot => {
-      snapshot.forEach(child => {
-        loaded.push(child.val());
-      });
-    });
+    const res = await req.json();
+    const vl = Object.keys(res);
+    vl.map(item => loaded.push(res[item]));
 
     setposts({
       arData: loaded.reverse(),

@@ -15,7 +15,6 @@ import { db, storage } from "../components/config";
 const AddArticle = props => {
   const [title, settitle] = useState("");
   const [description, setdescription] = useState("");
-  const [imgUrl, setimgUrl] = useState(null);
   const [file, setFile] = useState(null);
   const [status, setStatus] = useState(false);
   const [progress, setprogress] = useState("");
@@ -52,11 +51,11 @@ const AddArticle = props => {
     setFile(blob);
   };
 
-  const uploadImage = () => {
+  const uploadImage = async () => {
     const uploadTask = storage
       .ref()
       .child("articles")
-      .child(title)
+      .child(title + Date.now())
       .put(file);
     uploadTask.on(
       "state_changed",
@@ -67,9 +66,27 @@ const AddArticle = props => {
         setStatus(true);
       },
       err => console.log(err),
-      () => {
-        uploadTask.snapshot.ref.getDownloadURL().then(uri => setimgUrl(uri));
+      async () => {
+        const imgUrl = await uploadTask.snapshot.ref.getDownloadURL();
+
+        await fetch(
+          `https://stratic-research-institute.firebaseio.com/articles.json`,
+          {
+            method: "post",
+            headers: {
+              ContentType: "application/json"
+            },
+            body: JSON.stringify({
+              imgUrl,
+              title,
+              description
+            })
+          }
+        );
+
         setStatus(false);
+        Alert.alert("Successful !!!", "Article Published SuccessFully");
+        props.navigation.navigate("Home");
       }
     );
   };
@@ -86,14 +103,7 @@ const AddArticle = props => {
       );
     }
     uploadImage();
-    db.ref("articles/").push({
-      title,
-      imgUrl,
-      description
-    });
-
-    settitle(""), setdescription(""), setimgUrl(null);
-    setFile(null);
+    setFile(null), settitle(""), setdescription("");
   };
 
   return (

@@ -26,13 +26,13 @@ const Infographics = props => {
   });
 
   const fetchData = async () => {
-    const connection = db.ref("infographics");
+    const req = await fetch(
+      "https://stratic-research-institute.firebaseio.com/infographics.json"
+    );
+    const res = await req.json();
+    const vl = Object.keys(res);
     const loadedData = [];
-    await connection.once("value", snapshot => {
-      snapshot.forEach(child => {
-        loadedData.push(child.val());
-      });
-    });
+    vl.map(item => loadedData.push(res[item]));
     setstate({
       info: loadedData.reverse(),
       loading: false

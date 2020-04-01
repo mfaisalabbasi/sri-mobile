@@ -30,7 +30,6 @@ const UploadInfo = props => {
 
   //states for components
   const [title, setTitle] = useState("");
-  const [imgUrl, setImgUrl] = useState(null);
   const [progress, setprogress] = useState("");
   const [status, setStatus] = useState(false);
 
@@ -60,7 +59,7 @@ const UploadInfo = props => {
     const upload = storage.ref();
     const uptask = upload
       .child(`infographics`)
-      .child(title)
+      .child(title + Date.now())
       .put(infoUrl);
     // progress
     uptask.on(
@@ -74,9 +73,23 @@ const UploadInfo = props => {
       // err handling
       err => console.log(err),
       //uploaded successfully
-      () => {
-        uptask.snapshot.ref.getDownloadURL().then(uri => setImgUrl(uri));
+      async () => {
+        const imgUrl = await uptask.snapshot.ref.getDownloadURL();
+        await fetch(
+          `https://stratic-research-institute.firebaseio.com/infographics.json`,
+          {
+            method: "post",
+            headers: {
+              ContentType: "application/json"
+            },
+            body: JSON.stringify({
+              imgUrl
+            })
+          }
+        );
         setStatus(false);
+        Alert.alert("Successful !!!", "Infographic Published SuccessFully");
+        props.navigation.navigate("Infographics");
       }
     );
   };
@@ -90,13 +103,8 @@ const UploadInfo = props => {
     }
     uploadImage();
 
-    db.ref("infographics/").push({
-      imgUrl
-    });
-
     setinfoUrl("");
     setTitle("");
-    setImgUrl(null);
   };
 
   return (
