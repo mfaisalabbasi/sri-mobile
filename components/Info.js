@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
 const Info = ({ dta }) => {
   const { imgUrl } = dta;
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   img: {
     width: "100%",
     height: "100%",
-    overflow: "hidden"
+    resizeMode: Platform.OS == "android" ? "stretch" : "contain"
   }
 });
 export default Info;

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Platform } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 const Detail = props => {
@@ -9,11 +9,7 @@ const Detail = props => {
     <View style={styles.screen}>
       <ScrollView style={styles.scroll}>
         <View style={styles.imgScreen}>
-          <Image
-            source={{ uri: id.imgUrl }}
-            style={styles.img}
-            style={{ width: "100%", height: "100%" }}
-          />
+          <Image source={{ uri: id.imgUrl }} style={styles.img} />
         </View>
         <View style={styles.title}>
           <Text style={{ fontSize: 18, fontWeight: "bold" }}>{id.title}</Text>
@@ -36,14 +32,14 @@ const styles = StyleSheet.create({
   },
   imgScreen: {
     width: "100%",
-    height: 250,
-    padding: 5
+    height: 300,
+    marginTop: 2
   },
   img: {
-    width: "100%",
-    height: "100%",
     borderRadius: 5,
-    overflow: "hidden"
+    resizeMode: Platform.OS == "android" ? "stretch" : "contain",
+    width: "100%",
+    height: "100%"
   },
   title: {
     width: "100%",

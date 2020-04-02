@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Ionicons, Entypo, FontAwesome, Foundation } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -11,11 +11,9 @@ import {
 
 import Home from "../screens/Home";
 import Infographics from "../screens/Infographics";
-import InfoDetails from "../screens/InfoDetails";
 import Videos from "../screens/Videos";
 import Detail from "../screens/Detail";
 import About from "../screens/About";
-import Team from "../screens/Team";
 import AddArticle from "../admin/AddArticle";
 import UploadInfo from "../admin/UploadInfo";
 import AddBroad from "../admin/AddBroad";
@@ -143,28 +141,6 @@ const stackAddBroad = () => {
     </Stack.Navigator>
   );
 };
-//Stack Navigator For Team
-
-const stackTeam = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "#00344D"
-        },
-        headerTintColor: "#fff"
-      }}
-    >
-      <Stack.Screen
-        name='team'
-        component={Team}
-        options={{
-          title: "Our Team"
-        }}
-      />
-    </Stack.Navigator>
-  );
-};
 
 //Stack Navigator For About
 
@@ -206,13 +182,6 @@ const stackInfo = () => {
         component={Infographics}
         options={{
           title: "Infographics "
-        }}
-      />
-      <Stack.Screen
-        name='infoDetails'
-        component={InfoDetails}
-        options={{
-          title: "Infographics Details"
         }}
       />
     </Stack.Navigator>
@@ -306,6 +275,7 @@ const Navigation = () => {
   const [state, setstate] = useState(false);
   const fethchToken = async () => {
     const token = await AsyncStorage.getItem("token");
+    await AsyncStorage.removeItem("token");
 
     if (token) {
       setstate(true);
@@ -337,15 +307,6 @@ const Navigation = () => {
             }}
           />
 
-          <Draw.Screen
-            name='Our Team'
-            component={stackTeam}
-            options={{
-              drawerIcon: draw => {
-                return <Ionicons name='ios-people' size={30} color='white' />;
-              }
-            }}
-          />
           <Draw.Screen
             name='Adminstration'
             component={adminStack}
@@ -414,7 +375,7 @@ const Navigation = () => {
             }}
           />
           <Draw.Screen
-            name='Add Article'
+            name=' Add Article'
             component={stackAddarticle}
             options={{
               drawerIcon: draw => {
@@ -448,8 +409,3 @@ const styles = StyleSheet.create({
   }
 });
 export default Navigation;
-{
-  /* 
-  
-*/
-}
