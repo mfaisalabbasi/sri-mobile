@@ -1,6 +1,6 @@
-import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import { View, StyleSheet, Text, ScrollView, Image } from 'react-native';
+import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { View, StyleSheet, Text, ScrollView, Image } from "react-native";
 
 const About = props => {
   props.navigation.setOptions({
@@ -18,58 +18,79 @@ const About = props => {
     }
   });
   return (
-    <ScrollView contentContainerStyle={styles.screen}>
-      <View style={styles.admin}>
-        <Text style={styles.title}>What We Do ?</Text>
-      </View>
-      <View style={styles.dev}>
-        <Text style={styles.title}>Infographics Reports</Text>
-      </View>
-      <View style={styles.marketer}>
-        <Text style={styles.title}>Reserach and Analytics Reports</Text>
-      </View>
-    </ScrollView>
+    <View style={styles.scrn}>
+      <ScrollView contentContainerStyle={styles.screen}>
+        <View style={styles.container}>
+          <Text style={styles.title}>What We Do ?</Text>
+          <Text style={styles.content}>
+            Strategic Research Institute (SRI) is a non-partisan, non-political
+            and non-governmental research organization based in Islamabad. The
+            SRI aspires to share facts and knowledge about security, counter-
+            terrorism, strategic and social issues, and the ongoing conflicts in
+            the region through the medium of infographics, short videos, and
+            research reports. We, at SRI, strive to create a better
+            understanding of the knowledge required for policy making through
+            undertaking independent, impartial and objective research and
+            transmitting it to the audience in a manner that would be easier to
+            comprehend.
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.title}>Security</Text>
+          <Text style={styles.content}>
+            SRI focuses on security challenges faced by Pakistan in the form of
+            both traditional and non–traditional threats.
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.title}>Research</Text>
+          <Text style={styles.content}>
+            Our team aims at producing data from the valid and authentic sources
+            and provides a full fledge research on diverse topics.
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.title}>Influence</Text>
+          <Text style={styles.content}>
+            SRI with its presence on social media influences a huge audience
+            including students and policy makers based in Pakistan as well as
+            internationally.
+          </Text>
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
-  screen: {
+  scrn: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'space-around',
-    alignItems: 'center'
+    backgroundColor: "#E1EDF3"
+  },
+  screen: {
+    marginTop: 5,
+    justifyContent: "space-around",
+    alignItems: "center"
   },
   icon: {
     paddingHorizontal: 8
   },
+
+  container: {
+    width: "95%",
+    borderRadius: 3,
+    marginBottom: 5,
+    backgroundColor: "white"
+  },
   title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center'
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#DAF1FE",
+    color: "#00344D",
+    padding: 10
   },
-  img: {
-    width: '100%',
-    height: '100%'
-  },
-  admin: {
-    width: '85%',
-    height: 150,
-    backgroundColor: 'lightyellow',
-    elevation: 5,
-    borderRadius: 3
-  },
-  dev: {
-    width: '85%',
-    height: 150,
-    backgroundColor: 'lightpink',
-    elevation: 5,
-    borderRadius: 3
-  },
-  marketer: {
-    width: '85%',
-    height: 150,
-    backgroundColor: 'lightgreen',
-    elevation: 5,
-    borderRadius: 3
+  content: {
+    padding: 10
   }
 });
 export default About;

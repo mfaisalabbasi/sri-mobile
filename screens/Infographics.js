@@ -3,7 +3,6 @@ import { View, StyleSheet, ActivityIndicator } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 import Carousel from "react-native-snap-carousel";
 import Info from "../components/Info";
-import { db } from "../components/config";
 
 const Infographics = props => {
   const [state, setstate] = useState({

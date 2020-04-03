@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import { TouchableOpacity, Image, Text, StyleSheet, View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import React, { Fragment } from "react";
+import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
+import { WebView } from "react-native-webview";
 
 const VidGrid = props => {
   const { vidUrl, title } = props.dta;
@@ -25,28 +25,29 @@ const VidGrid = props => {
 
 const styles = StyleSheet.create({
   card: {
-    width: '97%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: "97%",
+    marginLeft: "auto",
+    marginRight: "auto",
     height: 300,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     marginVertical: 8,
     borderRadius: 5,
-    overflow: 'hidden',
+    overflow: "hidden",
     elevation: 3
   },
   vid: {
-    width: '100%',
-    height: '80%'
+    width: "100%",
+    height: "80%"
   },
   title: {
-    width: '100%',
-    height: '20%'
+    width: "100%",
+    height: "20%",
+    overflow: "hidden"
   },
   heading: {
     padding: 2,
-    fontSize: 18,
-    fontWeight: 'bold'
+    fontSize: 16,
+    fontWeight: "bold"
   }
 });
 export default VidGrid;

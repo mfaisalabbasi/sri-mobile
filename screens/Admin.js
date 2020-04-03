@@ -10,7 +10,6 @@ import {
   AsyncStorage
 } from "react-native";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { auth } from "../components/config";
 
 const AddArticle = props => {
   const [email, setEmail] = useState("");

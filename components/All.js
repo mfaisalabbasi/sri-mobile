@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     width: "65%",
-
+    overflow: "hidden",
     height: "90%",
     marginBottom: "auto",
     marginTop: "auto"
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     paddingLeft: 15,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginRight: 5
   }
 });
 
