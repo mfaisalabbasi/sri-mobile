@@ -43,11 +43,16 @@ const styles = StyleSheet.create({
   },
   title: {
     width: "100%",
-    padding: 5
+    padding: 5,
+    backgroundColor: "white"
   },
   description: {
     width: "100%",
-    padding: 8
+    padding: 5,
+    marginTop: 3,
+    backgroundColor: "white",
+    marginLeft: "auto",
+    marginRight: "auto"
   }
 });
 export default Detail;
