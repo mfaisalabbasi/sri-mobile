@@ -1,39 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet, ActivityIndicator } from "react-native";
-import { Ionicons, Entypo } from "@expo/vector-icons";
 import Carousel from "react-native-snap-carousel";
-import Info from "../components/Info";
+import Info from "../../components/Info";
 
-const Infographics = (props) => {
+const Health = (props) => {
   const [state, setstate] = useState({
     info: [],
     loading: true,
-  });
-  props.navigation.setOptions({
-    headerLeft: () => {
-      return (
-        <View style={styles.icon}>
-          <Ionicons
-            name='md-menu'
-            color='white'
-            size={30}
-            onPress={() => props.navigation.toggleDrawer()}
-          />
-        </View>
-      );
-    },
-    headerRight: () => {
-      return (
-        <View style={{ ...styles.icon, marginRight: 3 }}>
-          <Ionicons
-            name='md-images'
-            color='white'
-            size={28}
-            onPress={() => props.navigation.navigate("categories")}
-          />
-        </View>
-      );
-    },
   });
 
   const fetchData = async () => {
@@ -51,7 +24,7 @@ const Infographics = (props) => {
   };
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
   const { info, loading } = state;
 
   return (
@@ -69,11 +42,6 @@ const Infographics = (props) => {
           renderItem={(itemData) => <Info dta={itemData.item} />}
           sliderWidth={800}
           itemWidth={300}
-          autoplay
-          loop
-          enableMomentum={false}
-          lockScrollWhileSnapping={true}
-          autoplayInterval={5000}
         />
       )}
     </View>
@@ -96,4 +64,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Infographics;
+export default Health;

@@ -2,7 +2,7 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, StyleSheet, Text, ScrollView, Image } from "react-native";
 
-const About = props => {
+const About = (props) => {
   props.navigation.setOptions({
     headerLeft: () => {
       return (
@@ -15,7 +15,7 @@ const About = props => {
           />
         </View>
       );
-    }
+    },
   });
   return (
     <View style={styles.scrn}>
@@ -64,33 +64,32 @@ const About = props => {
 const styles = StyleSheet.create({
   scrn: {
     flex: 1,
-    backgroundColor: "#E1EDF3"
+    backgroundColor: "#E1EDF3",
   },
   screen: {
     marginTop: 5,
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
   },
   icon: {
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
 
   container: {
     width: "95%",
     borderRadius: 3,
-    marginBottom: 5,
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   title: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
     backgroundColor: "#DAF1FE",
     color: "#00344D",
-    padding: 10
+    padding: 5,
   },
   content: {
-    padding: 10
-  }
+    padding: 7,
+  },
 });
 export default About;

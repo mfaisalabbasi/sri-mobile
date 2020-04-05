@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { Ionicons, Entypo } from "@expo/vector-icons";
+import React, { useEffect, useState } from "react";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import {
   View,
   StyleSheet,
-  ScrollView,
   FlatList,
   ActivityIndicator,
-  Text,
-  AsyncStorage
+  KeyboardAvoidingView,
 } from "react-native";
 import All from "../components/All";
-import { db } from "../components/config.js";
+import Search from "../components/Search";
 
-const Home = props => {
+const Home = (props) => {
+  const [search, setsearch] = useState(false);
+
   props.navigation.setOptions({
     headerLeft: () => {
       return (
@@ -25,11 +25,25 @@ const Home = props => {
           />
         </View>
       );
-    }
+    },
+    headerRight: !search
+      ? () => {
+          return (
+            <View style={{ ...styles.icon, marginRight: 3 }}>
+              <FontAwesome
+                name='search'
+                color='white'
+                size={23}
+                onPress={() => setsearch(true)}
+              />
+            </View>
+          );
+        }
+      : Search,
   });
   const [posts, setposts] = useState({
     arData: [],
-    loading: true
+    loading: true,
   });
 
   const fetchData = async () => {
@@ -39,11 +53,11 @@ const Home = props => {
     const loaded = [];
     const res = await req.json();
     const vl = Object.keys(res);
-    vl.map(item => loaded.push(res[item]));
+    vl.map((item) => loaded.push(res[item]));
 
     setposts({
       arData: loaded.reverse(),
-      loading: false
+      loading: false,
     });
   };
   useEffect(() => {
@@ -62,7 +76,7 @@ const Home = props => {
           <FlatList
             keyExtractor={(item, index) => "key" + index}
             data={arData}
-            renderItem={itemData => (
+            renderItem={(itemData) => (
               <All
                 navigate={() =>
                   props.navigation.navigate("details", { id: itemData.item })
@@ -78,18 +92,18 @@ const Home = props => {
 };
 const styles = StyleSheet.create({
   screen: {
-    flex: 1
+    flex: 1,
   },
   parent: {
     flexDirection: "row",
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
 
   icon: {
-    paddingHorizontal: 8
-  }
+    paddingHorizontal: 8,
+  },
 });
 
 export default Home;

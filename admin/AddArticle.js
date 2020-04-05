@@ -5,14 +5,14 @@ import {
   StyleSheet,
   TextInput,
   Alert,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import { Ionicons, Foundation } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { db, storage } from "../components/config";
 
-const AddArticle = props => {
+const AddArticle = (props) => {
   const [title, settitle] = useState("");
   const [description, setdescription] = useState("");
   const [file, setFile] = useState(null);
@@ -30,7 +30,7 @@ const AddArticle = props => {
           />
         </View>
       );
-    }
+    },
   });
   //Image Picker library Function
   let openImagePickerAsync = async () => {
@@ -45,7 +45,7 @@ const AddArticle = props => {
     upload(pickerResult.uri);
   };
 
-  const upload = async uri => {
+  const upload = async (uri) => {
     const response = await fetch(uri);
     const blob = await response.blob();
     setFile(blob);
@@ -59,13 +59,13 @@ const AddArticle = props => {
       .put(file);
     uploadTask.on(
       "state_changed",
-      snapshot => {
+      (snapshot) => {
         let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
         setprogress("Uploading  " + progress.toFixed(2) + "%  done");
         setStatus(true);
       },
-      err => console.log(err),
+      (err) => console.log(err),
       async () => {
         const imgUrl = await uploadTask.snapshot.ref.getDownloadURL();
 
@@ -74,13 +74,13 @@ const AddArticle = props => {
           {
             method: "post",
             headers: {
-              ContentType: "application/json"
+              ContentType: "application/json",
             },
             body: JSON.stringify({
               imgUrl,
               title,
-              description
-            })
+              description,
+            }),
           }
         );
 
@@ -118,7 +118,7 @@ const AddArticle = props => {
             style={styles.input}
             placeholder='Add Title'
             placeholderTextColor='#44809D'
-            onChangeText={value => settitle(value)}
+            onChangeText={(value) => settitle(value)}
             name='title'
             value={title}
           />
@@ -146,12 +146,10 @@ const AddArticle = props => {
           )}
 
           <TextInput
-            numberOfLines={2}
-            multiline={true}
             style={styles.input}
             placeholder='Add Description'
             placeholderTextColor='#44809D'
-            onChangeText={value => setdescription(value)}
+            onChangeText={(value) => setdescription(value)}
             name='description'
             value={description}
             returnKeyType='done'
@@ -170,18 +168,18 @@ const AddArticle = props => {
 
 const styles = StyleSheet.create({
   icon: {
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
   screen: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   form: {
     width: "95%",
     height: "95%",
     backgroundColor: "lightgray",
-    borderRadius: 3
+    borderRadius: 3,
   },
   title: {
     width: "100%",
@@ -192,18 +190,18 @@ const styles = StyleSheet.create({
     color: "#44809D",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 10
+    marginTop: 10,
   },
   inputs: {
     width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
-    padding: 5
+    padding: 5,
   },
   inputContainer: {
     justifyContent: "space-between",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
     width: "80%",
@@ -211,7 +209,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "#44809D",
     marginVertical: 20,
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
   uploadBtn: {
     width: "80%",
@@ -220,7 +218,7 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
     borderRadius: 3,
-    marginBottom: -3
+    marginBottom: -3,
   },
   btn: {
     backgroundColor: "#44809D",
@@ -229,7 +227,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginLeft: "auto",
     marginRight: "auto",
-    paddingHorizontal: 20
-  }
+    paddingHorizontal: 20,
+  },
 });
 export default AddArticle;

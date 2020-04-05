@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
-  DrawerItemList
+  DrawerItemList,
 } from "@react-navigation/drawer";
 
 import Home from "../screens/Home";
@@ -19,6 +19,13 @@ import UploadInfo from "../admin/UploadInfo";
 import AddBroad from "../admin/AddBroad";
 import { View, StyleSheet, Image, AsyncStorage } from "react-native";
 import Admin from "../screens/Admin";
+import Infocat from "../screens/Infocat";
+import Defence from "../screens/categories/Defence";
+import Economy from "../screens/categories/Economy";
+import Education from "../screens/categories/Education";
+import Health from "../screens/categories/Health";
+import Military from "../screens/categories/Military";
+import Nuclear from "../screens/categories/Nuclear";
 
 //Stack Navigator For Articles
 const Stack = createStackNavigator();
@@ -27,23 +34,23 @@ const stackArticle = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='Home'
         component={Home}
         options={{
-          title: "Articles"
+          title: "Articles",
         }}
       />
       <Stack.Screen
         name='details'
         component={Detail}
         options={{
-          title: "Details"
+          title: "Details",
         }}
       />
     </Stack.Navigator>
@@ -57,16 +64,16 @@ const stackVideos = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='Videos'
         component={Videos}
         options={{
-          title: "Videos"
+          title: "Videos",
         }}
       />
     </Stack.Navigator>
@@ -80,16 +87,16 @@ const stackAddarticle = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='article'
         component={AddArticle}
         options={{
-          title: "Add Articles"
+          title: "Add Articles",
         }}
       />
     </Stack.Navigator>
@@ -103,16 +110,16 @@ const stackUpload = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='uploadinfo'
         component={UploadInfo}
         options={{
-          title: "Upload Infographics"
+          title: "Upload Infographics",
         }}
       />
     </Stack.Navigator>
@@ -126,16 +133,16 @@ const stackAddBroad = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='uploadinfo'
         component={AddBroad}
         options={{
-          title: "Add Broadcast"
+          title: "Add Broadcast",
         }}
       />
     </Stack.Navigator>
@@ -149,16 +156,16 @@ const stackAbout = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='About'
         component={About}
         options={{
-          title: " About Us"
+          title: " About Us",
         }}
       />
     </Stack.Navigator>
@@ -172,16 +179,66 @@ const stackInfo = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='Infographics'
         component={Infographics}
         options={{
-          title: "Infographics "
+          title: "Infographics ",
+        }}
+      />
+      <Stack.Screen
+        name='categories'
+        component={Infocat}
+        options={{
+          title: "Categories",
+        }}
+      />
+      {/* cat */}
+      <Stack.Screen
+        name='defence'
+        component={Defence}
+        options={{
+          title: "Defence",
+        }}
+      />
+      <Stack.Screen
+        name='economy'
+        component={Economy}
+        options={{
+          title: "Economy",
+        }}
+      />
+      <Stack.Screen
+        name='education'
+        component={Education}
+        options={{
+          title: "Education",
+        }}
+      />
+      <Stack.Screen
+        name='health'
+        component={Health}
+        options={{
+          title: "Health",
+        }}
+      />
+      <Stack.Screen
+        name='military'
+        component={Military}
+        options={{
+          title: "Military",
+        }}
+      />
+      <Stack.Screen
+        name='nuclear'
+        component={Nuclear}
+        options={{
+          title: "Nuclear",
         }}
       />
     </Stack.Navigator>
@@ -195,16 +252,16 @@ const adminStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#00344D"
+          backgroundColor: "#00344D",
         },
-        headerTintColor: "#fff"
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen
         name='Adminstration'
         component={Admin}
         options={{
-          title: "Adminstrations "
+          title: "Adminstrations ",
         }}
       />
     </Stack.Navigator>
@@ -221,32 +278,34 @@ const tabNavigation = () => {
         activeBackgroundColor: "#0C5172",
         inactiveBackgroundColor: "#00344D",
         inactiveTintColor: "white",
-        activeTintColor: "white"
+        activeTintColor: "white",
       }}
     >
       <Tab.Screen
         name='Articles'
         component={stackArticle}
         options={{
-          tabBarIcon: tab => (
+          tabBarIcon: (tab) => (
             <Ionicons name='ios-book' size={30} color='white' />
-          )
+          ),
         }}
       />
       <Tab.Screen
         name='Infographics'
         component={stackInfo}
         options={{
-          tabBarIcon: tab => <Entypo name='bar-graph' size={25} color='white' />
+          tabBarIcon: (tab) => (
+            <Entypo name='bar-graph' size={25} color='white' />
+          ),
         }}
       />
       <Tab.Screen
         name='Videos'
         component={stackVideos}
         options={{
-          tabBarIcon: tab => (
+          tabBarIcon: (tab) => (
             <Ionicons name='ios-videocam' size={30} color='white' />
-          )
+          ),
         }}
       />
     </Tab.Navigator>
@@ -289,21 +348,21 @@ const Navigation = () => {
       {!state ? (
         <Draw.Navigator
           drawerStyle={{
-            backgroundColor: "#00344D"
+            backgroundColor: "#00344D",
           }}
           drawerContentOptions={{
             inactiveTintColor: "white",
-            activeTintColor: "white"
+            activeTintColor: "white",
           }}
-          drawerContent={props => <CustomDrawerContent {...props} />}
+          drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
           <Draw.Screen
             name='  Home'
             component={tabNavigation}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return <Ionicons name='ios-home' size={30} color='white' />;
-              }
+              },
             }}
           />
 
@@ -311,18 +370,18 @@ const Navigation = () => {
             name='Adminstration'
             component={adminStack}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return (
                   <FontAwesome name='user-secret' size={28} color='white' />
                 );
-              }
+              },
             }}
           />
           <Draw.Screen
             name='About Us'
             component={stackAbout}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return (
                   <Ionicons
                     name='ios-information-circle-outline'
@@ -330,59 +389,59 @@ const Navigation = () => {
                     color='white'
                   />
                 );
-              }
+              },
             }}
           />
         </Draw.Navigator>
       ) : (
         <Draw.Navigator
           drawerStyle={{
-            backgroundColor: "#00344D"
+            backgroundColor: "#00344D",
           }}
           drawerContentOptions={{
             inactiveTintColor: "white",
-            activeTintColor: "white"
+            activeTintColor: "white",
           }}
-          drawerContent={props => <CustomDrawerContent {...props} />}
+          drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
           <Draw.Screen
             name='  Home'
             component={tabNavigation}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return <Ionicons name='ios-home' size={30} color='white' />;
-              }
+              },
             }}
           />
           <Draw.Screen
             name='Upload infographics'
             component={stackUpload}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return (
                   <Ionicons name='md-cloud-upload' size={30} color='white' />
                 );
-              }
+              },
             }}
           />
           <Draw.Screen
             name='Add Videos'
             component={stackAddBroad}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return <Ionicons name='ios-videocam' size={30} color='white' />;
-              }
+              },
             }}
           />
           <Draw.Screen
             name=' Add Article'
             component={stackAddarticle}
             options={{
-              drawerIcon: draw => {
+              drawerIcon: (draw) => {
                 return (
                   <Foundation name='clipboard-pencil' size={30} color='white' />
                 );
-              }
+              },
             }}
           />
         </Draw.Navigator>
@@ -396,7 +455,7 @@ const styles = StyleSheet.create({
     height: 220,
     marginBottom: 5,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   imgSec: {
     width: "85%",
@@ -405,7 +464,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
 
-    padding: 10
-  }
+    padding: 10,
+  },
 });
 export default Navigation;
