@@ -17,8 +17,11 @@ const Health = (props) => {
     const vl = Object.keys(res);
     const loadedData = [];
     vl.map((item) => loadedData.push(res[item]));
+    const filter = loadedData.filter((item) => {
+      return item.cat === "health";
+    });
     setstate({
-      info: loadedData.reverse(),
+      info: filter.reverse(),
       loading: false,
     });
   };

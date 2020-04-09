@@ -7,11 +7,11 @@ import {
   Alert,
   ScrollView,
   TouchableOpacity,
-  AsyncStorage
+  AsyncStorage,
 } from "react-native";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
-const AddArticle = props => {
+const AddArticle = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,14 +20,14 @@ const AddArticle = props => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>
       );
-    }
+    },
   });
 
   const handlePress = async () => {
@@ -37,12 +37,12 @@ const AddArticle = props => {
         {
           method: "POST",
           headers: {
-            ContentType: "application/json"
+            ContentType: "application/json",
           },
           body: JSON.stringify({
             email,
-            password
-          })
+            password,
+          }),
         }
       );
       const res = await req.json();
@@ -73,7 +73,7 @@ const AddArticle = props => {
             style={styles.input}
             placeholder='Type Email ...'
             placeholderTextColor='#44809D'
-            onChangeText={value => setEmail(value)}
+            onChangeText={(value) => setEmail(value)}
             name='email'
             value={email}
           />
@@ -82,7 +82,7 @@ const AddArticle = props => {
             style={styles.input}
             placeholder='Password ...'
             placeholderTextColor='#44809D'
-            onChangeText={value => setPassword(value)}
+            onChangeText={(value) => setPassword(value)}
             name='password'
             value={password}
             secureTextEntry={true}
@@ -99,18 +99,18 @@ const AddArticle = props => {
 
 const styles = StyleSheet.create({
   icon: {
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
   screen: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   form: {
     width: "95%",
     height: "95%",
     backgroundColor: "lightgray",
-    borderRadius: 3
+    borderRadius: 3,
   },
   title: {
     width: "100%",
@@ -121,18 +121,18 @@ const styles = StyleSheet.create({
     color: "#44809D",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 10
+    marginTop: 10,
   },
   inputs: {
     width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
-    padding: 5
+    padding: 5,
   },
   inputContainer: {
     justifyContent: "space-between",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
     width: "80%",
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "#44809D",
     marginVertical: 20,
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
   uploadBtn: {
     width: "80%",
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
     borderRadius: 3,
-    marginBottom: -3
+    marginBottom: -3,
   },
   btn: {
     backgroundColor: "#44809D",
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginLeft: "auto",
     marginRight: "auto",
-    paddingHorizontal: 20
-  }
+    paddingHorizontal: 20,
+  },
 });
 export default AddArticle;

@@ -17,8 +17,9 @@ const Nuclear = (props) => {
     const vl = Object.keys(res);
     const loadedData = [];
     vl.map((item) => loadedData.push(res[item]));
+    const filter = loadedData.filter((item) => item.cat === "nuclear");
     setstate({
-      info: loadedData.reverse(),
+      info: filter.reverse(),
       loading: false,
     });
   };

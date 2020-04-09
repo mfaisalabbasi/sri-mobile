@@ -5,34 +5,35 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Alert
+  Alert,
+  Picker,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
-import { db, storage } from "../components/config";
+import { storage } from "../components/config";
 import { ScrollView } from "react-native-gesture-handler";
 
-const UploadInfo = props => {
+const UploadInfo = (props) => {
   props.navigation.setOptions({
     headerLeft: () => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>
       );
-    }
+    },
   });
 
   //states for components
   const [title, setTitle] = useState("");
   const [progress, setprogress] = useState("");
   const [status, setStatus] = useState(false);
-
+  const [cat, setcat] = useState("");
   const [infoUrl, setinfoUrl] = useState(null);
 
   //Image Picker library Function
@@ -48,7 +49,7 @@ const UploadInfo = props => {
     upload(pickerResult.uri);
   };
   // upload Image Function
-  const upload = async uri => {
+  const upload = async (uri) => {
     const response = await fetch(uri);
     const blob = await response.blob();
     setinfoUrl(blob);
@@ -64,14 +65,14 @@ const UploadInfo = props => {
     // progress
     uptask.on(
       "state_changed",
-      snapshot => {
+      (snapshot) => {
         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
         setprogress("Uploading " + progress.toFixed(2) + "% done");
         setStatus(true);
       },
       // err handling
-      err => console.log(err),
+      (err) => console.log(err),
       //uploaded successfully
       async () => {
         const imgUrl = await uptask.snapshot.ref.getDownloadURL();
@@ -80,11 +81,12 @@ const UploadInfo = props => {
           {
             method: "post",
             headers: {
-              ContentType: "application/json"
+              ContentType: "application/json",
             },
             body: JSON.stringify({
-              imgUrl
-            })
+              imgUrl,
+              cat,
+            }),
           }
         );
         setStatus(false);
@@ -94,7 +96,7 @@ const UploadInfo = props => {
     );
   };
 
-  const onPress = async => {
+  const onPress = (async) => {
     if (title.length === 0) {
       return Alert.alert(
         "Submission Failed",
@@ -120,8 +122,28 @@ const UploadInfo = props => {
               placeholder='Add Title'
               placeholderTextColor='#44809D'
               value={title}
-              onChangeText={value => setTitle(value)}
+              onChangeText={(value) => setTitle(value)}
             />
+
+            <TouchableOpacity style={styles.uploadBtn}>
+              <Picker
+                selectedValue={cat}
+                onValueChange={(itemValue, itemIndex) => setcat(itemValue)}
+                style={{ color: "#44809D" }}
+              >
+                <Picker.Item
+                  label='Choose category'
+                  value='category not defined'
+                />
+
+                <Picker.Item label='Health' value='health' />
+                <Picker.Item label='Education' value='education' />
+                <Picker.Item label='Defence' value='defence' />
+                <Picker.Item label='Nuclear Technology' value='nuclear' />
+                <Picker.Item label='Military' value='military' />
+                <Picker.Item label='Economy' value='economy' />
+              </Picker>
+            </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.uploadBtn}
@@ -139,8 +161,8 @@ const UploadInfo = props => {
                   <Text
                     style={{
                       textAlign: "center",
-                      color: "#00344D",
-                      fontWeight: "bold"
+                      color: "#44809D",
+                      fontWeight: "bold",
                     }}
                   >
                     {progress}
@@ -165,18 +187,18 @@ const UploadInfo = props => {
 
 const styles = StyleSheet.create({
   icon: {
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
   screen: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   form: {
     width: "95%",
     height: "95%",
     backgroundColor: "lightgray",
-    borderRadius: 3
+    borderRadius: 3,
   },
   title: {
     width: "100%",
@@ -187,24 +209,24 @@ const styles = StyleSheet.create({
     color: "#44809D",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 10
+    marginTop: 10,
   },
   inputs: {
     width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
-    padding: 5
+    padding: 5,
   },
   inputContainer: {
     justifyContent: "space-between",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
     width: "80%",
     borderBottomWidth: 1,
     borderBottomColor: "#44809D",
-    marginVertical: 20
+    marginVertical: 20,
   },
   uploadBtn: {
     width: "80%",
@@ -212,7 +234,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#C3C6C8",
 
     borderRadius: 3,
-    marginBottom: 30
+    marginBottom: 30,
   },
   btn: {
     backgroundColor: "#44809D",
@@ -220,8 +242,8 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
 
-    paddingHorizontal: 20
-  }
+    paddingHorizontal: 20,
+  },
 });
 
 export default UploadInfo;

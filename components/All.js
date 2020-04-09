@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 
-const All = props => {
+const All = (props) => {
   return (
     <Fragment>
       <TouchableOpacity style={styles.container} onPress={props.navigate}>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     height: 150,
     elevation: 3,
     borderRadius: 3,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   imgContainer: {
     height: "90%",
@@ -38,24 +38,25 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     marginTop: "auto",
     marginBottom: "auto",
-    borderRadius: 3
+    borderRadius: 3,
   },
   titleContainer: {
     width: "65%",
     overflow: "hidden",
     height: "90%",
     marginBottom: "auto",
-    marginTop: "auto"
+    marginTop: "auto",
   },
   content: {
-    padding: 2
+    padding: 2,
   },
   title: {
     fontSize: 16,
     paddingLeft: 15,
     fontWeight: "bold",
-    marginRight: 5
-  }
+    marginRight: 5,
+    color: "black",
+  },
 });
 
 export default All;

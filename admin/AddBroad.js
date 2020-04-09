@@ -5,25 +5,25 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Alert
+  Alert,
 } from "react-native";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { db } from "../components/config";
-const AddBroad = props => {
+const AddBroad = (props) => {
   props.navigation.setOptions({
     headerLeft: () => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>
       );
-    }
+    },
   });
 
   const [title, settitle] = useState("");
@@ -45,7 +45,7 @@ const AddBroad = props => {
 
     db.ref("videos/").push({
       title,
-      vidUrl
+      vidUrl,
     });
     Alert.alert("Video submission", "Video Submitted successfully!");
     props.navigation.navigate("Videos");
@@ -65,14 +65,14 @@ const AddBroad = props => {
               placeholder='Video title'
               placeholderTextColor='#44809D'
               value={title}
-              onChangeText={value => settitle(value)}
+              onChangeText={(value) => settitle(value)}
             />
             <TextInput
               style={styles.input}
               placeholder='Video url'
               placeholderTextColor='#44809D'
               value={vidUrl}
-              onChangeText={value => setvidUrl(value)}
+              onChangeText={(value) => setvidUrl(value)}
             />
 
             <TouchableOpacity style={styles.uploadBtn} onPress={onPress}>
@@ -89,18 +89,18 @@ const AddBroad = props => {
 
 const styles = StyleSheet.create({
   icon: {
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
   screen: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   form: {
     width: "95%",
     height: "95%",
     backgroundColor: "lightgray",
-    borderRadius: 3
+    borderRadius: 3,
   },
   title: {
     width: "100%",
@@ -109,35 +109,35 @@ const styles = StyleSheet.create({
     padding: 5,
     fontSize: 20,
     color: "#44809D",
-    marginTop: 15
+    marginTop: 15,
   },
   inputs: {
     width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
-    padding: 5
+    padding: 5,
   },
   inputContainer: {
     justifyContent: "space-between",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
     width: "80%",
     borderBottomWidth: 1,
     borderBottomColor: "#44809D",
-    marginVertical: 20
+    marginVertical: 20,
   },
   uploadBtn: {
     width: "80%",
     padding: 10,
     backgroundColor: "#44809D",
     marginVertical: 10,
-    borderRadius: 5
+    borderRadius: 5,
   },
   btn: {
-    width: "100%"
-  }
+    width: "100%",
+  },
 });
 
 export default AddBroad;

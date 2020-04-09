@@ -14,9 +14,9 @@ const Infographics = (props) => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>
@@ -38,12 +38,13 @@ const Infographics = (props) => {
 
   const fetchData = async () => {
     const req = await fetch(
-      "https://stratic-research-institute.firebaseio.com/infographics.json"
+      'https://stratic-research-institute.firebaseio.com/infographics.json?orderBy="$key"&limitToLast=10'
     );
     const res = await req.json();
     const vl = Object.keys(res);
     const loadedData = [];
     vl.map((item) => loadedData.push(res[item]));
+
     setstate({
       info: loadedData.reverse(),
       loading: false,
@@ -51,7 +52,7 @@ const Infographics = (props) => {
   };
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
   const { info, loading } = state;
 
   return (

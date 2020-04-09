@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, Platform } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
-const Detail = props => {
+const Detail = (props) => {
   const { id } = props.route.params;
 
   return (
@@ -12,10 +12,14 @@ const Detail = props => {
           <Image source={{ uri: id.imgUrl }} style={styles.img} />
         </View>
         <View style={styles.title}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>{id.title}</Text>
+          <Text style={{ fontSize: 18, fontWeight: "bold", color: "black" }}>
+            {id.title}
+          </Text>
         </View>
         <View style={styles.description}>
-          <Text>{id.description}</Text>
+          <Text style={{ lineHeight: 25, color: "black" }}>
+            {id.description}
+          </Text>
         </View>
       </ScrollView>
     </View>
@@ -23,36 +27,36 @@ const Detail = props => {
 };
 const styles = StyleSheet.create({
   screen: {
-    flex: 1
+    flex: 1,
   },
   scroll: {
     width: "98%",
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
   imgScreen: {
     width: "100%",
     height: 300,
-    marginTop: 2
+    marginTop: 2,
   },
   img: {
     borderRadius: 5,
     resizeMode: Platform.OS == "android" ? "stretch" : "contain",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
   title: {
     width: "100%",
     padding: 5,
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   description: {
     width: "100%",
-    padding: 5,
+    padding: 10,
     marginTop: 3,
     backgroundColor: "white",
     marginLeft: "auto",
-    marginRight: "auto"
-  }
+    marginRight: "auto",
+  },
 });
 export default Detail;

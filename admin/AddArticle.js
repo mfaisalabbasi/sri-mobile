@@ -23,9 +23,9 @@ const AddArticle = (props) => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>

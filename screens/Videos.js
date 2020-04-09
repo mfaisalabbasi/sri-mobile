@@ -1,20 +1,71 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, ActivityIndicator, FlatList } from "react-native";
-import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import {
+  View,
+  StyleSheet,
+  ActivityIndicator,
+  FlatList,
+  TouchableOpacity,
+  Dimensions,
+  TextInput,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import VidGrid from "../components/VidGrid";
 import { db } from "../components/config";
-import Search from "../components/Search";
 
 const Videos = (props) => {
   const [search, setsearch] = useState(false);
+  const [state, setstate] = useState({
+    broadcast: [],
+    loading: true,
+  });
+  const [filterData, setFilterData] = useState([]);
+  const [query, setQuery] = useState("");
+
+  const handleSearch = (event) => {
+    setQuery(event.toLowerCase());
+    const newData = filterData.filter((item) => {
+      const titleData = item.title.toLowerCase();
+      return titleData.includes(query);
+    });
+    setstate({
+      broadcast: newData,
+    });
+  };
+
+  //search bar function
+  const Search = () => {
+    return (
+      <View style={styles.inputScreen}>
+        <TouchableOpacity
+          style={styles.backbtn}
+          onPress={() => setsearch(false)}
+        >
+          <Ionicons name='md-arrow-back' size={25} color='#fff' />
+        </TouchableOpacity>
+        <View style={styles.input}>
+          <TextInput
+            title='Search'
+            placeholder='Search Queries '
+            placeholderTextColor='#44809D'
+            onChangeText={handleSearch}
+            style={{
+              color: "#fff",
+              width: "95%",
+              padding: 5,
+            }}
+          />
+        </View>
+      </View>
+    );
+  };
   props.navigation.setOptions({
     headerLeft: () => {
       return (
         <View style={styles.icon}>
           <Ionicons
-            name='md-menu'
+            name='ios-menu'
             color='white'
-            size={30}
+            size={32}
             onPress={() => props.navigation.toggleDrawer()}
           />
         </View>
@@ -24,21 +75,16 @@ const Videos = (props) => {
       ? () => {
           return (
             <View style={{ ...styles.icon, marginRight: 3 }}>
-              <FontAwesome
-                name='search'
+              <Ionicons
+                name='ios-search'
                 color='white'
-                size={23}
+                size={26}
                 onPress={() => setsearch(true)}
               />
             </View>
           );
         }
       : Search,
-  });
-
-  const [state, setstate] = useState({
-    broadcast: [],
-    loading: true,
   });
 
   const fetchData = async () => {
@@ -53,10 +99,11 @@ const Videos = (props) => {
       broadcast: loadedArr.reverse(),
       loading: false,
     });
+    setFilterData(loadedArr);
   };
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
   const { broadcast, loading } = state;
   return (
     <View style={styles.screen}>
@@ -89,6 +136,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  inputScreen: {
+    width: Dimensions.get("window").width,
+    height: "100%",
+    backgroundColor: "#00344D",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  backbtn: {
+    width: "10%",
+
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  input: {
+    width: "85%",
   },
 });
 export default Videos;
