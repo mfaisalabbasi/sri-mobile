@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#B1B5B7",
   },
   down: {
-    backgroundColor: "#264D64",
     width: "97%",
     height: "97%",
   },
