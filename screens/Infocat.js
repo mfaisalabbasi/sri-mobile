@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 const Infocat = (props) => {
   return (
     <ScrollView contentContainerStyle={styles.scroll}>

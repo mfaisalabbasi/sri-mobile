@@ -9,7 +9,7 @@ const Health = (props) => {
     loading: true,
   });
 
-  const fetchData = async () => {
+  const fetchData = async (props) => {
     const req = await fetch(
       "https://stratic-research-institute.firebaseio.com/infographics.json"
     );
@@ -42,7 +42,16 @@ const Health = (props) => {
             carousel = c;
           }}
           data={info}
-          renderItem={(itemData) => <Info dta={itemData.item} />}
+          renderItem={(itemData) => (
+            <Info
+              dta={itemData.item}
+              navigate={() =>
+                props.navigation.navigate("single", {
+                  id: itemData.item.imgUrl,
+                })
+              }
+            />
+          )}
           sliderWidth={800}
           itemWidth={300}
         />

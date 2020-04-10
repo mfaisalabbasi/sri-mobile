@@ -42,7 +42,16 @@ const Military = (props) => {
             carousel = c;
           }}
           data={info}
-          renderItem={(itemData) => <Info dta={itemData.item} />}
+          renderItem={(itemData) => (
+            <Info
+              dta={itemData.item}
+              navigate={() =>
+                props.navigation.navigate("single", {
+                  id: itemData.item.imgUrl,
+                })
+              }
+            />
+          )}
           sliderWidth={800}
           itemWidth={300}
         />

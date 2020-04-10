@@ -129,7 +129,9 @@ const Home = (props) => {
             renderItem={(itemData) => (
               <All
                 navigate={() =>
-                  props.navigation.navigate("details", { id: itemData.item })
+                  props.navigation.navigate("details", {
+                    id: itemData.item,
+                  })
                 }
                 dta={itemData.item}
               />

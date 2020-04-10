@@ -26,6 +26,7 @@ import Education from "../screens/categories/Education";
 import Health from "../screens/categories/Health";
 import Military from "../screens/categories/Military";
 import Nuclear from "../screens/categories/Nuclear";
+import Single from "../components/Single";
 
 //Stack Navigator For Articles
 const Stack = createStackNavigator();
@@ -196,6 +197,13 @@ const stackInfo = () => {
         component={Infocat}
         options={{
           title: "Categories",
+        }}
+      />
+      <Stack.Screen
+        name='single'
+        component={Single}
+        options={{
+          title: "Download",
         }}
       />
       {/* cat */}
