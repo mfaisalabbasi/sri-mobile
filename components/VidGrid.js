@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
 
-const VidGrid = props => {
+const VidGrid = (props) => {
   const { vidUrl, title } = props.dta;
 
   return (
@@ -12,7 +12,7 @@ const VidGrid = props => {
           javaScriptEnabled={true}
           domStorageEnabled={true}
           source={{
-            html: vidUrl
+            html: vidUrl,
           }}
         />
       </View>
@@ -33,21 +33,23 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderRadius: 5,
     overflow: "hidden",
-    elevation: 3
+    elevation: 3,
   },
   vid: {
     width: "100%",
-    height: "80%"
+    height: "75%",
   },
   title: {
     width: "100%",
-    height: "20%",
-    overflow: "hidden"
+    height: "25%",
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
   },
   heading: {
     padding: 2,
-    fontSize: 16,
-    fontWeight: "bold"
-  }
+
+    fontWeight: "bold",
+  },
 });
 export default VidGrid;

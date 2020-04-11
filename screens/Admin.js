@@ -46,18 +46,18 @@ const AddArticle = (props) => {
         }
       );
       const res = await req.json();
-      if (!res.ok) {
+      if (res.error) {
         Alert.alert("Invalid Credentials", "check your email or password");
+      } else {
+        const token = res.idToken;
+        await AsyncStorage.setItem("token", token);
+        props.navigation.navigate("Infographics");
+        setEmail("");
+        setPassword("");
+        Alert.alert("successful", "welcome, operation succeed");
       }
-
-      const token = res.idToken;
-      await AsyncStorage.setItem("token", token);
-      props.navigation.navigate("Infographics");
-      setEmail("");
-      setPassword("");
-      Alert.alert("successful", "welcome, operation succeed");
     } catch (error) {
-      console.log(error);
+      alert("something went wrong check credentials");
     }
   };
 
