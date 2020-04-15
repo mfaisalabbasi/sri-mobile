@@ -6,7 +6,7 @@ const About = (props) => {
   props.navigation.setOptions({
     headerLeft: () => {
       return (
-        <View style={styles.icon}>
+        <View style={{ marginLeft: 7 }}>
           <Ionicons
             name='ios-menu'
             color='white'
@@ -18,79 +18,55 @@ const About = (props) => {
     },
   });
   return (
-    <View style={styles.scrn}>
-      <ScrollView contentContainerStyle={styles.screen}>
-        <View style={styles.container}>
-          <Text style={styles.title}>What We Do ?</Text>
-          <Text style={styles.content}>
-            Strategic Research Institute (SRI) is a non-partisan, non-political
-            and non-governmental research organization based in Islamabad. The
-            SRI aspires to share facts and knowledge about security, counter-
-            terrorism, strategic and social issues, and the ongoing conflicts in
-            the region through the medium of infographics, short videos, and
-            research reports. We, at SRI, strive to create a better
-            understanding of the knowledge required for policy making through
-            undertaking independent, impartial and objective research and
-            transmitting it to the audience in a manner that would be easier to
-            comprehend.
+    <ScrollView style={styles.scrn}>
+      <View style={styles.container}>
+        <View style={styles.img}>
+          <Image
+            source={require("../assets/about.png")}
+            style={{ width: "100%", height: "100%" }}
+          />
+        </View>
+        <View style={styles.content}>
+          <Text style={{ lineHeight: 20, fontFamily: "ebrima" }}>
+            <Text style={{ fontWeight: "bold", fontFamily: "ebrima" }}>
+              Strategic{"  "} Research{"  "} Institute{"  "} (SRI)
+            </Text>
+            {"  "}
+            is non-partisan, non-political and non-governmental reasearch
+            orgnization based in islamabad. The SRI endeavors to create better
+            understanding about security , counter terrorism, Strategic and
+            social issues, and ongoing conflicts in the region among the
+            conserned stackholder through undertaking independent, impartial and
+            objective research and analysis. The SRI aspires to create awareness
+            among all segments of the pakistani society and government to
+            jointly strive for peaceful, tolerant and progressive Pakistan with
+            the help of short videos and documenttaries.
           </Text>
         </View>
-        <View style={styles.container}>
-          <Text style={styles.title}>Security</Text>
-          <Text style={styles.content}>
-            SRI focuses on security challenges faced by Pakistan in the form of
-            both traditional and non–traditional threats.
-          </Text>
-        </View>
-        <View style={styles.container}>
-          <Text style={styles.title}>Research</Text>
-          <Text style={styles.content}>
-            Our team aims at producing data from the valid and authentic sources
-            and provides a full fledge research on diverse topics.
-          </Text>
-        </View>
-        <View style={styles.container}>
-          <Text style={styles.title}>Influence</Text>
-          <Text style={styles.content}>
-            SRI with its presence on social media influences a huge audience
-            including students and policy makers based in Pakistan as well as
-            internationally.
-          </Text>
-        </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
   scrn: {
     flex: 1,
-    backgroundColor: "#E1EDF3",
+    backgroundColor: "#fff",
   },
-  screen: {
-    marginTop: 5,
-    justifyContent: "space-around",
-    alignItems: "center",
-  },
-  icon: {
-    paddingHorizontal: 8,
-  },
-
   container: {
-    width: "95%",
-    borderRadius: 3,
-    backgroundColor: "white",
+    width: "99%",
+    height: "100%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    padding: 10,
   },
-  title: {
-    fontSize: 16,
-    fontWeight: "bold",
-    textAlign: "center",
-    backgroundColor: "#DAF1FE",
-    color: "#00344D",
-    padding: 5,
+  img: {
+    width: "100%",
+    height: 200,
   },
   content: {
-    padding: 7,
-    color: "black",
+    width: "100%",
+
+    padding: 10,
   },
 });
 export default About;

@@ -26,9 +26,9 @@ const Infographics = (props) => {
       return (
         <View style={{ ...styles.icon, marginRight: 3 }}>
           <Ionicons
-            name='md-images'
+            name='ios-list-box'
             color='white'
-            size={28}
+            size={23}
             onPress={() => props.navigation.navigate("categories")}
           />
         </View>

@@ -38,6 +38,9 @@ const stackArticle = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -68,6 +71,9 @@ const stackVideos = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -91,6 +97,9 @@ const stackAddarticle = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -112,6 +121,9 @@ const stackUpload = () => {
       screenOptions={{
         headerStyle: {
           backgroundColor: "#00344D",
+          headerTitleStyle: {
+            fontFamily: "ebrima",
+          },
         },
         headerTintColor: "#fff",
       }}
@@ -137,6 +149,9 @@ const stackAddBroad = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -160,6 +175,9 @@ const stackAbout = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -183,6 +201,9 @@ const stackInfo = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -263,6 +284,9 @@ const adminStack = () => {
           backgroundColor: "#00344D",
         },
         headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Stack.Screen
@@ -287,6 +311,9 @@ const tabNavigation = () => {
         inactiveBackgroundColor: "#00344D",
         inactiveTintColor: "white",
         activeTintColor: "white",
+        labelStyle: {
+          fontFamily: "ebrima",
+        },
       }}
     >
       <Tab.Screen
@@ -361,11 +388,14 @@ const Navigation = () => {
           drawerContentOptions={{
             inactiveTintColor: "white",
             activeTintColor: "white",
+            labelStyle: {
+              fontFamily: "ebrima",
+            },
           }}
           drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
           <Draw.Screen
-            name='  Home'
+            name='Home'
             component={tabNavigation}
             options={{
               drawerIcon: (draw) => {

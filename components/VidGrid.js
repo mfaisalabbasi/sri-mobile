@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
+    fontFamily: "ebrima",
   },
   heading: {
     padding: 2,

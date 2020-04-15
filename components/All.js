@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginRight: 5,
     color: "black",
+    fontFamily: "ebrima",
   },
 });
 

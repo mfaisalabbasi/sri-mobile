@@ -12,12 +12,26 @@ const Detail = (props) => {
           <Image source={{ uri: id.imgUrl }} style={styles.img} />
         </View>
         <View style={styles.title}>
-          <Text style={{ fontSize: 14, fontWeight: "bold", color: "black" }}>
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "bold",
+              color: "black",
+              fontFamily: "ebrima",
+            }}
+          >
             {id.title}
           </Text>
         </View>
         <View style={styles.description}>
-          <Text style={{ lineHeight: 20, color: "black", fontSize: 12 }}>
+          <Text
+            style={{
+              lineHeight: 20,
+              color: "black",
+              fontFamily: "ebrima",
+              padding: 5,
+            }}
+          >
             {id.description}
           </Text>
         </View>
@@ -47,12 +61,12 @@ const styles = StyleSheet.create({
   },
   title: {
     width: "100%",
-    padding: 5,
+    padding: 10,
     backgroundColor: "white",
   },
   description: {
     width: "100%",
-    marginTop: 3,
+    marginTop: 5,
     paddingLeft: 5,
     backgroundColor: "white",
     marginLeft: "auto",
