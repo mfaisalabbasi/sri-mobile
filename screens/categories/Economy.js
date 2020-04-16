@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, ActivityIndicator } from "react-native";
-import Carousel from "react-native-snap-carousel";
-import Info from "../../components/Info";
+import { View, StyleSheet, ActivityIndicator, FlatList } from "react-native";
+import Infocat from "../../components/Infocat";
 
 const Economy = (props) => {
   const [state, setstate] = useState({
@@ -37,24 +36,23 @@ const Economy = (props) => {
           <ActivityIndicator size='large' color='#44809D' />
         </View>
       ) : (
-        <Carousel
-          ref={(c) => {
-            carousel = c;
-          }}
-          data={info}
-          renderItem={(itemData) => (
-            <Info
-              dta={itemData.item}
-              navigate={() =>
-                props.navigation.navigate("single", {
-                  id: itemData.item.imgUrl,
-                })
-              }
-            />
-          )}
-          sliderWidth={800}
-          itemWidth={300}
-        />
+        <View style={styles.flat}>
+          <FlatList
+            numColumns={2}
+            keyExtractor={(item, index) => "key" + index}
+            data={info}
+            renderItem={(itemData) => (
+              <Infocat
+                dta={itemData.item}
+                navigate={() =>
+                  props.navigation.navigate("single", {
+                    id: itemData.item.imgUrl,
+                  })
+                }
+              />
+            )}
+          />
+        </View>
       )}
     </View>
   );
@@ -64,7 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#B1B5B7",
+    backgroundColor: "#fff",
   },
   icon: {
     paddingHorizontal: 8,
@@ -74,6 +72,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  flat: {
+    width: "90%",
+    height: "95%",
   },
 });
 export default Economy;

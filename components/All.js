@@ -1,21 +1,36 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
+import { Entypo } from "@expo/vector-icons";
 
 const All = (props) => {
   return (
-    <Fragment>
+    <View style={{ backgroundColor: "white" }}>
       <TouchableOpacity style={styles.container} onPress={props.navigate}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{props.dta.title}</Text>
+          <Entypo style={styles.title} name='dots-three-horizontal' size={23} />
+        </View>
         <View style={styles.imgContainer}>
           <Image
             source={{ uri: props.dta.imgUrl }}
-            style={{ width: "100%", height: "100%", borderRadius: 3 }}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: 3,
+              resizeMode: "cover",
+            }}
           />
         </View>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{props.dta.title}</Text>
-        </View>
+        <View
+          style={{
+            width: "85%",
+            borderBottomWidth: 0.3,
+            borderBottomColor: "#00344D",
+            marginLeft: 12,
+          }}
+        ></View>
       </TouchableOpacity>
-    </Fragment>
+    </View>
   );
 };
 
@@ -26,26 +41,22 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     backgroundColor: "white",
     marginTop: 5,
-    height: 150,
-    elevation: 3,
+    height: 120,
     borderRadius: 3,
     flexDirection: "row",
+    flexWrap: "wrap",
   },
   imgContainer: {
-    height: "90%",
-    width: "35%",
-    padding: 5,
+    height: "60%",
+    width: "20%",
+
     overflow: "hidden",
-    marginTop: "auto",
-    marginBottom: "auto",
-    borderRadius: 3,
+    borderRadius: 1,
   },
   titleContainer: {
-    width: "65%",
+    width: "78%",
     overflow: "hidden",
-    height: "90%",
-    marginBottom: "auto",
-    marginTop: "auto",
+    height: "80%",
   },
   content: {
     padding: 2,
@@ -54,7 +65,7 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     fontWeight: "bold",
     marginRight: 5,
-    color: "black",
+    color: "#00344D",
     fontFamily: "ebrima",
   },
 });

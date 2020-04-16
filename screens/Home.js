@@ -123,20 +123,22 @@ const Home = (props) => {
         </View>
       ) : (
         <View style={styles.screen}>
-          <FlatList
-            keyExtractor={(item, index) => "key" + index}
-            data={arData}
-            renderItem={(itemData) => (
-              <All
-                navigate={() =>
-                  props.navigation.navigate("details", {
-                    id: itemData.item,
-                  })
-                }
-                dta={itemData.item}
-              />
-            )}
-          />
+          <View style={{ marginTop: 10 }}>
+            <FlatList
+              keyExtractor={(item, index) => "key" + index}
+              data={arData}
+              renderItem={(itemData) => (
+                <All
+                  navigate={() =>
+                    props.navigation.navigate("details", {
+                      id: itemData.item,
+                    })
+                  }
+                  dta={itemData.item}
+                />
+              )}
+            />
+          </View>
         </View>
       )}
     </View>
@@ -145,6 +147,7 @@ const Home = (props) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    backgroundColor: "white",
   },
   parent: {
     flexDirection: "row",
