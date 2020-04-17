@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, ActivityIndicator } from "react-native";
+import { View, StyleSheet, ActivityIndicator, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Carousel from "react-native-snap-carousel";
 import Info from "../components/Info";
@@ -62,29 +62,46 @@ const Infographics = (props) => {
           <ActivityIndicator size='large' color='#44809D' />
         </View>
       ) : (
-        <Carousel
-          ref={(c) => {
-            carousel = c;
-          }}
-          data={info}
-          renderItem={(itemData) => (
-            <Info
-              dta={itemData.item}
-              navigate={() =>
-                props.navigation.navigate("single", {
-                  id: itemData.item.imgUrl,
-                })
-              }
+        <View>
+          {info.length === 0 ? (
+            <View
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <Text style={{ color: "#44809D", fontSize: 18 }}>
+                Content not found !!!
+              </Text>
+            </View>
+          ) : (
+            <Carousel
+              ref={(c) => {
+                carousel = c;
+              }}
+              data={info}
+              renderItem={(itemData) => (
+                <Info
+                  dta={itemData.item}
+                  navigate={() =>
+                    props.navigation.navigate("single", {
+                      id: itemData.item.imgUrl,
+                    })
+                  }
+                />
+              )}
+              sliderWidth={800}
+              itemWidth={300}
+              autoplay
+              loop
+              enableMomentum={false}
+              lockScrollWhileSnapping={true}
+              autoplayInterval={5000}
             />
           )}
-          sliderWidth={800}
-          itemWidth={300}
-          autoplay
-          loop
-          enableMomentum={false}
-          lockScrollWhileSnapping={true}
-          autoplayInterval={5000}
-        />
+        </View>
       )}
     </View>
   );

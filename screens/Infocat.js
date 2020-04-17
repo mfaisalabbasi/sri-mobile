@@ -152,7 +152,7 @@ const Infocat = (props) => {
 const styles = StyleSheet.create({
   screen: {
     justifyContent: "center",
-
+    paddingBottom: 20,
     backgroundColor: "#fff",
   },
 

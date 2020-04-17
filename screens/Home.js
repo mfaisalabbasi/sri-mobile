@@ -8,6 +8,7 @@ import {
   Dimensions,
   TextInput,
   TouchableOpacity,
+  Text,
 } from "react-native";
 import All from "../components/All";
 
@@ -124,20 +125,35 @@ const Home = (props) => {
       ) : (
         <View style={styles.screen}>
           <View style={{ marginTop: 10 }}>
-            <FlatList
-              keyExtractor={(item, index) => "key" + index}
-              data={arData}
-              renderItem={(itemData) => (
-                <All
-                  navigate={() =>
-                    props.navigation.navigate("details", {
-                      id: itemData.item,
-                    })
-                  }
-                  dta={itemData.item}
-                />
-              )}
-            />
+            {arData.length === 0 ? (
+              <View
+                style={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <Text style={{ color: "#44809D", fontSize: 18 }}>
+                  Content not found !!!
+                </Text>
+              </View>
+            ) : (
+              <FlatList
+                keyExtractor={(item, index) => "key" + index}
+                data={arData}
+                renderItem={(itemData) => (
+                  <All
+                    navigate={() =>
+                      props.navigation.navigate("details", {
+                        id: itemData.item,
+                      })
+                    }
+                    dta={itemData.item}
+                  />
+                )}
+              />
+            )}
           </View>
         </View>
       )}

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
   TextInput,
+  Text,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import VidGrid from "../components/VidGrid";
@@ -112,11 +113,28 @@ const Videos = (props) => {
           <ActivityIndicator size='large' color='#00344D' />
         </View>
       ) : (
-        <FlatList
-          keyExtractor={(item, index) => "key" + index}
-          data={broadcast}
-          renderItem={(itemData) => <VidGrid dta={itemData.item} />}
-        />
+        <View>
+          {broadcast.length === 0 ? (
+            <View
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <Text style={{ color: "#44809D", fontSize: 18 }}>
+                Content not found !!!
+              </Text>
+            </View>
+          ) : (
+            <FlatList
+              keyExtractor={(item, index) => "key" + index}
+              data={broadcast}
+              renderItem={(itemData) => <VidGrid dta={itemData.item} />}
+            />
+          )}
+        </View>
       )}
     </View>
   );
