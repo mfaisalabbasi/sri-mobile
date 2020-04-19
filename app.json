@@ -27,7 +27,7 @@
         "resizeMode": "contain",
         "backgroundColor": "#00344d"
       },
-
+      "icon": "./assets/sri.png",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "CAMERA",
