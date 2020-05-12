@@ -22,12 +22,6 @@
     },
     "android": {
       "package": "com.sri.strategic_research_institute",
-      "splash": {
-        "image": "./assets/splash.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#00344d"
-      },
-      "icon": "./assets/sri.png",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "CAMERA",

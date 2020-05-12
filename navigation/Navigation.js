@@ -354,7 +354,10 @@ function CustomDrawerContent(props) {
         <View style={styles.imgSec}>
           <Image
             source={require("../assets/logo.png")}
-            style={{ width: "100%", height: "100%" }}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
           />
         </View>
       </View>
@@ -490,18 +493,18 @@ const Navigation = () => {
 const styles = StyleSheet.create({
   logo: {
     width: "100%",
-    height: 220,
+    height: 200,
     marginBottom: 5,
     justifyContent: "center",
     alignItems: "center",
   },
   imgSec: {
-    width: "85%",
+    width: "100%",
     height: "100%",
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
-
+    marginRight: 20,
     padding: 10,
   },
 });
