@@ -1,0 +1,520 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+MERGED from [:expo-permissions] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-permissions\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-screens] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-splash-screen] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
+MERGED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-25:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-android-image-cropper-2.7.0.aar\6cb9af50d758dd810127efdd0d01902d\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-react-native-adapter] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-community_masked-view] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-safe-area-context] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-react-native-0.61.5.aar\7b87dec8b12f7dfc0f6bccd277c37d30\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\dd1d3a996833b0e2e8a26e420c345974\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\45fee39e8bccc97c5617ecf793358fa8\AndroidManifest.xml:17:1-24:12
+MERGED from [:expo-app-loader-provider] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-app-loader-provider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-constants] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-constants\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-error-recovery] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-error-recovery\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-30:12
+MERGED from [:expo-font] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-font\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-keep-awake] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-keep-awake\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-linear-gradient] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:expo-media-library] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-media-library\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-sqlite] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-sqlite\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-web-browser] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-web-browser\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-barcode-scanner-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-barcode-scanner-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-camera-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-camera-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-constants-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-constants-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-face-detector-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-face-detector-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-file-system-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-file-system-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-font-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-font-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-permissions-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-permissions-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-task-manager-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-task-manager-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-core] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-image-loader-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-image-loader-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-sensors-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-sensors-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [org.webkit:android-jsc:r245459] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\8dd5a5caa9e35004fd4db2085fba4994\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\cd92e69e74ca861d0210ee1a32cbd7e0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\9b30731f776d8298cf4112e735893550\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\transition-1.1.0.aar\20fcb132c687b5db25838023a3c38985\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\ee3687f3aee15c9f7dfc8dbc05541123\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\3ec05eaa52c5d7858d6f9cbda5f29744\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\2775c7eebcb8be4bf12597f39234a53f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\1e9dd3ee0bcf96880b5a4b0daca29279\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\24d9773b7b5239975ca450d62b2f2346\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\a43d1167757eda2fa75f647792e12cf1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\0138c9b18881298e4d593f67c1e1b3f6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\fc93a5770197f07002c40db4790c83af\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\24f9ea24ab36c9fa9e24381624cc658c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\5ae1e799c543f1eeb377af2d60d19908\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\94abf0cdd964e5fd7a78cefeccd88d9e\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\740ec9170c08b749f8852e0013e12782\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\951e2ab5334c9a076cb3c35d6afc14f6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\94eb60628f3612bbc25428a561b8bb93\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\160944e8b96b434e0f641d4af1ed87b5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\1093b2b74b0a6463785a0077e980f891\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8960916317ae943eae3dc577aff1e70e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\8c480c043973c2205555417e26989812\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\c2a75210b7a28a59c353cdcce68c0fd8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\2c124464aea0f639b6baf1406d211ca5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\fa7ae6f2922aaac16981be10ad048fa4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\5bd435713d1be36553822886eb661361\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\ccd6e83a2011dfbfae513cfad7e86ada\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\fce9c22f55cbae41a03d7069d8ddbbca\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\15dafe369622a58eb1bf097896fad8db\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\36d436d90500af17ae207d06fda437b3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c652ec04da24c488d1621c3666466ba1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\5f55128f16552d9657c81d7f3e9fdcb1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6ba513a6d08eb01ed17f1404b73925cf\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\9e6bd581d5cc1875cf016865a9668b59\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\c542883a33138b92d942540465ef4168\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\aa2c7da993c02f4b865c9b5c37602e40\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\195e66fd86dda8a45ae2e3c9f901e04b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\fb7f01937b1d71637d0cdf5657f61cbe\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4620f9c573eeae9edb9a9efc575002ae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\3576aad3ccf84d240baaf57836a5bfe5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fresco-2.0.0.aar\9e52b6902bf7120a963f2dc02da54528\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-2.0.0.aar\d6cacc33ac8082361bfe229535fb884f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawee-2.0.0.aar\922ee3bbfea19dd427a5f092e5c5ff00\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagefilters-2.0.0.aar\56ab71881d61ca8351fd506dc5280db9\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-2.0.0.aar\5bdaa526296ac4ecefe9226da5053996\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagetranscoder-2.0.0.aar\03273b31a263a3bf9cb65fb08dd18d77\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-2.0.0.aar\9404654e478c8990b944ebcc74d638b5\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\741c2b851724fe6f7cd387a15672168d\AndroidManifest.xml:2:1-13:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-fbcore-2.0.0.aar\d6154f02893d331363617ec6db174ffe\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+	package
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:2:5-22
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:1-38:12
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:5:22-75
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:6:5-80
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-80
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:7:5-81
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_INTERNAL_STORAGE
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:8:22-77
+application
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:14:5-36:19
+MERGED from [:react-native-splash-screen] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
+MERGED from [:react-native-splash-screen] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
+MERGED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-23:19
+MERGED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-23:19
+MERGED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-react-native-0.61.5.aar\7b87dec8b12f7dfc0f6bccd277c37d30\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-react-native-0.61.5.aar\7b87dec8b12f7dfc0f6bccd277c37d30\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\dd1d3a996833b0e2e8a26e420c345974\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\dd1d3a996833b0e2e8a26e420c345974\AndroidManifest.xml:22:5-20
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-19:19
+MERGED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-19:19
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\ee3687f3aee15c9f7dfc8dbc05541123\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\ee3687f3aee15c9f7dfc8dbc05541123\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\3ec05eaa52c5d7858d6f9cbda5f29744\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\3ec05eaa52c5d7858d6f9cbda5f29744\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\2775c7eebcb8be4bf12597f39234a53f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\2775c7eebcb8be4bf12597f39234a53f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\94abf0cdd964e5fd7a78cefeccd88d9e\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\94abf0cdd964e5fd7a78cefeccd88d9e\AndroidManifest.xml:10:5-20
+MERGED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6ba513a6d08eb01ed17f1404b73925cf\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6ba513a6d08eb01ed17f1404b73925cf\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\3576aad3ccf84d240baaf57836a5bfe5\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\3576aad3ccf84d240baaf57836a5bfe5\AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\741c2b851724fe6f7cd387a15672168d\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\741c2b851724fe6f7cd387a15672168d\AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:18:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:16:7-39
+	android:roundIcon
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:18:7-52
+	android:icon
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:17:7-41
+	android:allowBackup
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:19:7-34
+	android:theme
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:20:7-38
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:15:7-38
+activity#com.sri.MainActivity
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:21:7-30:18
+	android:label
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:23:9-41
+	android:windowSoftInputMode
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:25:9-51
+	android:configChanges
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:24:9-79
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:22:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:26:9-29:25
+action#android.intent.action.MAIN
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:27:13-65
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:27:21-62
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:28:13-73
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:28:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:31:7-84
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:31:17-81
+activity#com.theartofdev.edmodo.cropper.CropImageActivity
+ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:32:7-35:12
+	android:theme
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:34:3-46
+	android:name
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml:33:3-66
+uses-sdk
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+MERGED from [:expo-permissions] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-permissions\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-permissions\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-android-image-cropper-2.7.0.aar\6cb9af50d758dd810127efdd0d01902d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-android-image-cropper-2.7.0.aar\6cb9af50d758dd810127efdd0d01902d\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_masked-view] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-safe-area-context] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-react-native-0.61.5.aar\7b87dec8b12f7dfc0f6bccd277c37d30\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-react-native-0.61.5.aar\7b87dec8b12f7dfc0f6bccd277c37d30\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\dd1d3a996833b0e2e8a26e420c345974\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\dd1d3a996833b0e2e8a26e420c345974\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\45fee39e8bccc97c5617ecf793358fa8\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\45fee39e8bccc97c5617ecf793358fa8\AndroidManifest.xml:20:5-22:41
+MERGED from [:expo-app-loader-provider] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-app-loader-provider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-loader-provider] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-app-loader-provider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-constants\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-constants\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-error-recovery\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-error-recovery\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-font] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-font\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-font\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-keep-awake\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-keep-awake\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-media-library] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-media-library\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-media-library] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-media-library\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-sqlite\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-sqlite\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-web-browser\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-web-browser\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-barcode-scanner-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-barcode-scanner-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-camera-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-camera-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-constants-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-constants-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-face-detector-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-face-detector-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-file-system-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-file-system-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-font-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-font-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-permissions-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-permissions-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-task-manager-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-task-manager-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\@unimodules\core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-image-loader-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-image-loader-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-sensors-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\unimodules-sensors-interface\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\8dd5a5caa9e35004fd4db2085fba4994\AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\8dd5a5caa9e35004fd4db2085fba4994\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\cd92e69e74ca861d0210ee1a32cbd7e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\cd92e69e74ca861d0210ee1a32cbd7e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\9b30731f776d8298cf4112e735893550\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\9b30731f776d8298cf4112e735893550\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\transition-1.1.0.aar\20fcb132c687b5db25838023a3c38985\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\transition-1.1.0.aar\20fcb132c687b5db25838023a3c38985\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\ee3687f3aee15c9f7dfc8dbc05541123\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\ee3687f3aee15c9f7dfc8dbc05541123\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\3ec05eaa52c5d7858d6f9cbda5f29744\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\3ec05eaa52c5d7858d6f9cbda5f29744\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\2775c7eebcb8be4bf12597f39234a53f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\2775c7eebcb8be4bf12597f39234a53f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\1e9dd3ee0bcf96880b5a4b0daca29279\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\1e9dd3ee0bcf96880b5a4b0daca29279\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\24d9773b7b5239975ca450d62b2f2346\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\24d9773b7b5239975ca450d62b2f2346\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\a43d1167757eda2fa75f647792e12cf1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\a43d1167757eda2fa75f647792e12cf1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\0138c9b18881298e4d593f67c1e1b3f6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\0138c9b18881298e4d593f67c1e1b3f6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\fc93a5770197f07002c40db4790c83af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\fc93a5770197f07002c40db4790c83af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\24f9ea24ab36c9fa9e24381624cc658c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\24f9ea24ab36c9fa9e24381624cc658c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\5ae1e799c543f1eeb377af2d60d19908\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\5ae1e799c543f1eeb377af2d60d19908\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\94abf0cdd964e5fd7a78cefeccd88d9e\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\94abf0cdd964e5fd7a78cefeccd88d9e\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\740ec9170c08b749f8852e0013e12782\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\740ec9170c08b749f8852e0013e12782\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\951e2ab5334c9a076cb3c35d6afc14f6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\951e2ab5334c9a076cb3c35d6afc14f6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\94eb60628f3612bbc25428a561b8bb93\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\94eb60628f3612bbc25428a561b8bb93\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\160944e8b96b434e0f641d4af1ed87b5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\160944e8b96b434e0f641d4af1ed87b5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\1093b2b74b0a6463785a0077e980f891\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\1093b2b74b0a6463785a0077e980f891\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8960916317ae943eae3dc577aff1e70e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8960916317ae943eae3dc577aff1e70e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\8c480c043973c2205555417e26989812\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\8c480c043973c2205555417e26989812\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\c2a75210b7a28a59c353cdcce68c0fd8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\c2a75210b7a28a59c353cdcce68c0fd8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\2c124464aea0f639b6baf1406d211ca5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\2c124464aea0f639b6baf1406d211ca5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\fa7ae6f2922aaac16981be10ad048fa4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\fa7ae6f2922aaac16981be10ad048fa4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\5bd435713d1be36553822886eb661361\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\5bd435713d1be36553822886eb661361\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\ccd6e83a2011dfbfae513cfad7e86ada\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\ccd6e83a2011dfbfae513cfad7e86ada\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\900c3491d2bd8292976b05c43cd287ff\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\fce9c22f55cbae41a03d7069d8ddbbca\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\fce9c22f55cbae41a03d7069d8ddbbca\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\15dafe369622a58eb1bf097896fad8db\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\15dafe369622a58eb1bf097896fad8db\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\36d436d90500af17ae207d06fda437b3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\36d436d90500af17ae207d06fda437b3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c652ec04da24c488d1621c3666466ba1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c652ec04da24c488d1621c3666466ba1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\5f55128f16552d9657c81d7f3e9fdcb1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\5f55128f16552d9657c81d7f3e9fdcb1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6ba513a6d08eb01ed17f1404b73925cf\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6ba513a6d08eb01ed17f1404b73925cf\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\9e6bd581d5cc1875cf016865a9668b59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\9e6bd581d5cc1875cf016865a9668b59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\c542883a33138b92d942540465ef4168\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\c542883a33138b92d942540465ef4168\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\aa2c7da993c02f4b865c9b5c37602e40\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\aa2c7da993c02f4b865c9b5c37602e40\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\195e66fd86dda8a45ae2e3c9f901e04b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\195e66fd86dda8a45ae2e3c9f901e04b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\fb7f01937b1d71637d0cdf5657f61cbe\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\fb7f01937b1d71637d0cdf5657f61cbe\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4620f9c573eeae9edb9a9efc575002ae\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\4620f9c573eeae9edb9a9efc575002ae\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\3576aad3ccf84d240baaf57836a5bfe5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\3576aad3ccf84d240baaf57836a5bfe5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fresco-2.0.0.aar\9e52b6902bf7120a963f2dc02da54528\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\fresco-2.0.0.aar\9e52b6902bf7120a963f2dc02da54528\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-2.0.0.aar\d6cacc33ac8082361bfe229535fb884f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-2.0.0.aar\d6cacc33ac8082361bfe229535fb884f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawee-2.0.0.aar\922ee3bbfea19dd427a5f092e5c5ff00\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\drawee-2.0.0.aar\922ee3bbfea19dd427a5f092e5c5ff00\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagefilters-2.0.0.aar\56ab71881d61ca8351fd506dc5280db9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagefilters-2.0.0.aar\56ab71881d61ca8351fd506dc5280db9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-2.0.0.aar\5bdaa526296ac4ecefe9226da5053996\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-2.0.0.aar\5bdaa526296ac4ecefe9226da5053996\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagetranscoder-2.0.0.aar\03273b31a263a3bf9cb65fb08dd18d77\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\nativeimagetranscoder-2.0.0.aar\03273b31a263a3bf9cb65fb08dd18d77\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-2.0.0.aar\9404654e478c8990b944ebcc74d638b5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-2.0.0.aar\9404654e478c8990b944ebcc74d638b5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\741c2b851724fe6f7cd387a15672168d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\741c2b851724fe6f7cd387a15672168d\AndroidManifest.xml:7:5-9:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-fbcore-2.0.0.aar\d6154f02893d331363617ec6db174ffe\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-fbcore-2.0.0.aar\d6154f02893d331363617ec6db174ffe\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\LENOVO\Desktop\native\sri-mobile\android\app\src\main\AndroidManifest.xml
+provider#expo.modules.imagepicker.ImagePickerFileProvider
+ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-22:20
+	android:grantUriPermissions
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-47
+	android:authorities
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-75
+	android:exported
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-76
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:71
+	android:resource
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-68
+	android:name
+		ADDED from [:expo-image-picker] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-67
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+uses-permission#android.permission.STORAGE
+ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-63
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
+	android:authorities
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
+	android:exported
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
+	tools:replace
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [:expo-file-system] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-74
+service#expo.modules.location.services.LocationTaskService
+ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:expo-location] C:\Users\LENOVO\Desktop\native\sri-mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\f1dca08d34f766b392db19f2849a1efb\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\638d68b6b236f488ecc3ce4485fbebbd\AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:13:22-76
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\LENOVO\.gradle\caches\transforms-1\files-1.1\jetified-library-3.2.11.aar\35c982d9eeebd312ae9586884ce8a177\AndroidManifest.xml:26:13-120

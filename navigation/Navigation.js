@@ -8,6 +8,7 @@ import {
   DrawerContentScrollView,
   DrawerItemList,
 } from "@react-navigation/drawer";
+import { Fonts } from "../src/utils/Fonts";
 
 import Home from "../screens/Home";
 import Infographics from "../screens/Infographics";
@@ -39,7 +40,7 @@ const stackArticle = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -72,7 +73,7 @@ const stackVideos = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -98,7 +99,7 @@ const stackAddarticle = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -122,7 +123,7 @@ const stackUpload = () => {
         headerStyle: {
           backgroundColor: "#00344D",
           headerTitleStyle: {
-            fontFamily: "ebrima",
+            fontFamily: Fonts.ebrima,
           },
         },
         headerTintColor: "#fff",
@@ -150,7 +151,7 @@ const stackAddBroad = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -176,7 +177,7 @@ const stackAbout = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -202,7 +203,7 @@ const stackInfo = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -285,7 +286,7 @@ const adminStack = () => {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -312,7 +313,7 @@ const tabNavigation = () => {
         inactiveTintColor: "white",
         activeTintColor: "white",
         labelStyle: {
-          fontFamily: "ebrima",
+          fontFamily: Fonts.ebrima,
         },
       }}
     >
@@ -392,7 +393,7 @@ const Navigation = () => {
             inactiveTintColor: "white",
             activeTintColor: "white",
             labelStyle: {
-              fontFamily: "ebrima",
+              fontFamily: Fonts.ebrima,
             },
           }}
           drawerContent={(props) => <CustomDrawerContent {...props} />}

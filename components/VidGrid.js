@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
+import { Fonts } from "../src/utils/Fonts";
 
 const VidGrid = (props) => {
   const { vidUrl, title } = props.dta;
@@ -45,11 +46,11 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "ebrima",
+    fontFamily: Fonts.ebrima,
   },
   heading: {
     padding: 2,
-
+    color: "#00344D",
     fontWeight: "bold",
   },
 });

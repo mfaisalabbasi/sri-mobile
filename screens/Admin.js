@@ -65,7 +65,7 @@ const AddArticle = (props) => {
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.form}>
         <Text style={styles.title}>
-          <FontAwesome name='user-secret' size={70} color='#44809D' />
+          <FontAwesome name='user-secret' size={100} color='#44809D' />
         </Text>
 
         <View style={styles.inputs}>
@@ -105,29 +105,27 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "lightgray",
   },
   form: {
     width: "95%",
-    height: "95%",
-    backgroundColor: "lightgray",
+    height: "auto",
     borderRadius: 3,
   },
   title: {
     width: "100%",
     textAlign: "center",
     fontWeight: "bold",
-    padding: 5,
+    padding: 1,
     fontSize: 20,
     color: "#44809D",
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10,
   },
   inputs: {
     width: "99%",
     marginLeft: "auto",
     marginRight: "auto",
-    padding: 5,
+    padding: 2,
   },
   inputContainer: {
     justifyContent: "space-between",
@@ -138,7 +136,7 @@ const styles = StyleSheet.create({
     width: "80%",
     borderBottomWidth: 1,
     borderBottomColor: "#44809D",
-    marginVertical: 20,
+    marginVertical: 10,
     marginLeft: "auto",
     marginRight: "auto",
   },

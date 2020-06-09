@@ -1,24 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Navigation from "./navigation/Navigation";
-import * as Font from "expo-font";
-import { AppLoading } from "expo";
+import SplashScreen from "react-native-splash-screen";
+import { View, StatusBar } from "react-native";
 
-const fetchFonts = () => {
-  return Font.loadAsync({
-    ebrima: require("./assets/fonts/ebrima.ttf"),
-  });
-};
 const App = () => {
-  const [loadfonts, setloadfonts] = useState(false);
-  if (!loadfonts) {
-    return (
-      <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setloadfonts(true)}
-        onError={(err) => console.log(error)}
-      />
-    );
-  }
-  return <Navigation />;
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+  return (
+    <View style={{ flex: 1 }}>
+      <StatusBar backgroundColor='#011924' barStyle='light-content' />
+      <Navigation />
+    </View>
+  );
 };
 export default App;

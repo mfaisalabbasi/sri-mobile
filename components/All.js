@@ -1,6 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import { Fonts } from "../src/utils/Fonts";
 
 const All = (props) => {
   return (
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginRight: 5,
     color: "#00344D",
-    fontFamily: "ebrima",
+    fontFamily: Fonts.ebrima,
   },
 });
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, StyleSheet, Text, ScrollView, Image } from "react-native";
+import { Fonts } from "../src/utils/Fonts";
 
 const About = (props) => {
   props.navigation.setOptions({
@@ -27,8 +28,8 @@ const About = (props) => {
           />
         </View>
         <View style={styles.content}>
-          <Text style={{ lineHeight: 20, fontFamily: "ebrima" }}>
-            <Text style={{ fontWeight: "bold", fontFamily: "ebrima" }}>
+          <Text style={{ lineHeight: 20, fontFamily: Fonts.ebrima }}>
+            <Text style={{ fontWeight: "bold", fontFamily: Fonts.ebrima }}>
               Strategic{"  "} Research{"  "} Institute{"  "} (SRI)
             </Text>
             {"  "}

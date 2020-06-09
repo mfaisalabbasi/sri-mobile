@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Platform } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-
+import { Fonts } from "../src/utils/Fonts";
 const Detail = (props) => {
   const { id } = props.route.params;
 
@@ -16,8 +16,8 @@ const Detail = (props) => {
             style={{
               fontSize: 14,
               fontWeight: "bold",
-              color: "black",
-              fontFamily: "ebrima",
+              color: "#00344D",
+              fontFamily: Fonts.ebrima,
             }}
           >
             {id.title}
@@ -28,7 +28,7 @@ const Detail = (props) => {
             style={{
               lineHeight: 20,
               color: "black",
-              fontFamily: "ebrima",
+              fontFamily: Fonts.ebrima,
               padding: 5,
             }}
           >
